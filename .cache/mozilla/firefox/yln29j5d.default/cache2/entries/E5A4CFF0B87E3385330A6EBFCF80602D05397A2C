@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+            <title>Integracja z GNOME Shell :: Dodatki dla programu Firefox</title>
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://addons.cdn.mozilla.net/static/img/favicon.ico">
+
+    
+        <link title="Dodatki dla Firefox"
+          rel="search" type="application/opensearchdescription+xml"
+          href="/pl/firefox/opensearch.xml" />
+
+          <link href="https://addons.cdn.mozilla.net/static/css/tabzilla/tabzilla.css" rel="stylesheet" />
+              <link rel="stylesheet" media="all" href="https://addons.cdn.mozilla.net/static/css/zamboni/impala-min.css?build=5cb8048" />
+      <link rel="stylesheet" media="all" href="https://addons.cdn.mozilla.net/static/css/restyle/css-min.css?build=af9519e" />
+      <!--[if lt IE 9]>
+        <script src="https://addons.cdn.mozilla.net/static/js/lib/iepp.min.js?b=6f8764e8-58e63811"></script>
+      <![endif]-->
+      <!--[if lte IE 9]>
+        <link rel="stylesheet" href="https://addons.cdn.mozilla.net/static/css/legacy/ie9.css?b=6f8764e8-58e63811">
+      <![endif]-->
+    
+        <meta property="og:title" content="Integracja z GNOME Shell">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://addons.cdn.mozilla.net/user-media/addon_icons/751/751081-64.png?modified=1491448820">
+  <meta property="og:url" content="https://addons.mozilla.org/pl/firefox/addon/gnome-shell-integration/">
+  <meta property="og:description" content="To rozszerzenie dostarcza integrację z GNOME Shell i repozytorium rozszerzeń https://extensions.gnome.org">
+    <noscript><link rel="stylesheet" href="https://addons.cdn.mozilla.net/static/css/impala/nojs.css?b=6f8764e8-58e63811"></noscript>
+
+    
+    
+    <script src="https://addons.cdn.mozilla.net/static/js/preload-min.js?build=6f8764e8-58e63811"></script>
+  </head>
+  <body class="html-ltr firefox moz-header-slim gutter addon-details  is-impala restyle"
+        data-app="firefox"
+        data-appname="Firefox"
+        data-appid="1"
+        data-anonymous="true"
+        data-readonly="false"
+        data-media-url="https://addons.cdn.mozilla.net/user-media/"
+        data-static-url="https://addons.cdn.mozilla.net/static/"
+        data-raven-dsn="https://8c1c5936578948a9a0614cbbafccf049@sentry.prod.mozaws.net/78"
+        data-raven-urls="[&#39;addons.mozilla.org&#39;, &#39;addons.cdn.mozilla.net&#39;]"
+        data-fxa-config="{&#34;state&#34;: &#34;82b9618735253fca0074c682ed6bb124ba06d701c462fdc34f22e6f1bc3a5f83&#34;, &#34;clientId&#34;: &#34;a4907de5fa9d78fc&#34;, &#34;oauthHost&#34;: &#34;https://oauth.accounts.firefox.com/v1&#34;, &#34;profileHost&#34;: &#34;https://profile.accounts.firefox.com/v1&#34;, &#34;redirectUrl&#34;: &#34;https://addons.mozilla.org/api/v3/accounts/authenticate/&#34;, &#34;scope&#34;: &#34;profile&#34;, &#34;contentHost&#34;: &#34;https://accounts.firefox.com&#34;}"
+        >
+
+    <div id="main-wrapper">
+      <div id="page" class="c">
+                  <div class="header-bg">
+            <div class="amo-header-wrapper">
+              <div id="tabzilla">
+    <a href="https://www.mozilla.org/">Mozilla</a>
+</div>              <div class="amo-header">
+                <nav id="aux-nav" role="navigation" class="menu-nav c">
+                  <ul>
+                                            <li class="account anonymous nomenu login legacy">
+    <a href="https://oauth.accounts.firefox.com/v1/authorization?action=signup&amp;scope=profile&amp;state=82b9618735253fca0074c682ed6bb124ba06d701c462fdc34f22e6f1bc3a5f83%3AL3BsL2ZpcmVmb3gvYWRkb24vZ25vbWUtc2hlbGwtaW50ZWdyYXRpb24v&amp;redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthenticate%2F&amp;client_id=a4907de5fa9d78fc">Zarejestruj się</a> lub <a href="https://oauth.accounts.firefox.com/v1/authorization?action=signin&amp;scope=profile&amp;state=82b9618735253fca0074c682ed6bb124ba06d701c462fdc34f22e6f1bc3a5f83%3AL3BsL2ZpcmVmb3gvYWRkb24vZ25vbWUtc2hlbGwtaW50ZWdyYXRpb24v&amp;redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthenticate%2F&amp;client_id=a4907de5fa9d78fc">Zaloguj się</a>  </li>
+
+                                                              <li>
+                        <a href="#" id="other-apps" title="Znajdź dodatki dla innych programów">Inne programy</a>
+                        <ul class="other-apps">
+                                                                                                                                          <li id="app-thunderbird" class="thunderbird">
+                                <a href="/pl/thunderbird">Thunderbird</a>
+                              </li>
+                                                                                                                <li id="app-android" class="android">
+                                <a href="/pl/android">Firefox dla Androida</a>
+                              </li>
+                                                                                                                                                                      <li id="app-seamonkey" class="seamonkey">
+                                <a href="/pl/seamonkey">SeaMonkey</a>
+                              </li>
+                                                                              </ul>
+                      </li>
+                                      </ul>
+                </nav>
+                <div class="header-search" role="search">
+                                                                                  <form id="search" action="/pl/firefox/search/" data-no-csrf>
+  <input id="search-q" type="text" name="q" autocomplete="off" title=""
+         class="text placeholder"
+         placeholder="szukaj dodatków"
+         value="">
+        <input id="id_appver" name="appver" type="hidden" />
+    <input id="id_platform" name="platform" type="hidden" />
+    <button class="search-button" type="submit" title="Szukaj"
+         src="https://addons.cdn.mozilla.net/static/img/zamboni/global/btn-search.png?b=6f8764e8-58e63811"></button>
+      <div id="site-search-suggestions"
+         data-cat="all"
+         data-src="/pl/firefox/search/suggestions"></div>
+  </form>                                                      </div>
+                <div id="masthead">
+                                    <h1 class="site-title">
+  <a href="/pl/firefox/" title="Wróć do głównej strony Firefox – dodatki">
+    <img alt="" src="https://addons.cdn.mozilla.net/static/img/icons/firefox.png?b=6f8764e8-58e63811">
+    Dodatki
+</a>
+</h1>                  
+
+<nav id="site-nav" class="menu-nav c">
+  <ul>
+      <li id="extensions">
+    <a href="/pl/firefox/extensions/">Rozszerzenia</a>
+    <ul class="two-col">
+              <li><em><a href="/pl/firefox/extensions/?sort=featured">Polecane</a></em></li>
+              <li><em><a href="/pl/firefox/extensions/?sort=users">Najpopularniejsze</a></em></li>
+              <li><em><a href="/pl/firefox/extensions/?sort=rating">Najwyżej oceniane</a></em></li>
+                  <li><a href="/pl/firefox/extensions/alerts-updates/">Alarmy i aktualizacje</a></li>
+            <li><a href="/pl/firefox/extensions/games-entertainment/">Gry i rozrywka</a></li>
+            <li><a href="/pl/firefox/extensions/feeds-news-blogging/">Kanały, wiadomości i blogi</a></li>
+            <li><a href="/pl/firefox/extensions/tabs/">Karty</a></li>
+            <li><a href="/pl/firefox/extensions/appearance/">Modyfikacje interfejsu</a></li>
+            <li><a href="/pl/firefox/extensions/language-support/">Narzędzia językowe</a></li>
+            <li><a href="/pl/firefox/extensions/web-development/">Narzędzia twórców witryn</a></li>
+            <li><a href="/pl/firefox/extensions/download-management/">Pobieranie plików</a></li>
+            <li><a href="/pl/firefox/extensions/privacy-security/">Prywatność i bezpieczeństwo</a></li>
+            <li><a href="/pl/firefox/extensions/search-tools/">Search Tools</a></li>
+            <li><a href="/pl/firefox/extensions/social-communication/">Społecznościowe i komunikacyjne</a></li>
+            <li><a href="/pl/firefox/extensions/shopping/">Zakupy</a></li>
+            <li><a href="/pl/firefox/extensions/bookmarks/">Zakładki</a></li>
+            <li><a href="/pl/firefox/extensions/photos-music-videos/">Zdjęcia, muzyka i filmy</a></li>
+            <li><a href="/pl/firefox/extensions/other/">Other</a></li>
+          </ul>
+  </li>
+
+    
+        <li id="themes">
+      <a href="/pl/firefox/themes/">Motywy</a>
+              <ul class="two-col">
+                      <li><em><a href="/pl/firefox/themes/?sort=popular">Najpopularniejsze</a></em></li>
+                      <li><em><a href="/pl/firefox/themes/?sort=rating">Najwyżej oceniane</a></em></li>
+                      <li><em><a href="/pl/firefox/themes/?sort=created">Najnowsze</a></em></li>
+                                <li><a href="/pl/firefox/themes/abstract">Abstrakcyjne</a></li>
+                      <li><a href="/pl/firefox/themes/film-and-tv">Film i TV</a></li>
+                      <li><a href="/pl/firefox/themes/firefox">Firefox</a></li>
+                      <li><a href="/pl/firefox/themes/foxkeh">Foxkeh</a></li>
+                      <li><a href="/pl/firefox/themes/scenery">Krajobrazy</a></li>
+                      <li><a href="/pl/firefox/themes/fashion">Moda</a></li>
+                      <li><a href="/pl/firefox/themes/music">Muzyka</a></li>
+                      <li><a href="/pl/firefox/themes/nature">Natura</a></li>
+                      <li><a href="/pl/firefox/themes/causes">Okolicznościowe</a></li>
+                      <li><a href="/pl/firefox/themes/other">Other</a></li>
+                      <li><a href="/pl/firefox/themes/solid">Proste</a></li>
+                      <li><a href="/pl/firefox/themes/seasonal">Sezonowe</a></li>
+                      <li><a href="/pl/firefox/themes/sports">Sportowe</a></li>
+                      <li><a href="/pl/firefox/themes/holiday">Wakacje</a></li>
+                      <li><a href="/pl/firefox/themes/websites">Witryny</a></li>
+                  </ul>
+        <div>
+          <a class="complete-themes" href="/pl/firefox/complete-themes/">
+            Want more customization? Try <b>Complete Themes</b>          </a>
+        </div>
+          </li>
+
+        <li id="collections">
+            <a href="/pl/firefox/collections/">Kolekcje</a>
+      <ul>
+                  <li><em><a href="/pl/firefox/collections/?sort=featured">Polecane</a></em></li>
+                  <li><em><a href="/pl/firefox/collections/?sort=users">Najczęściej obserwowane</a></em></li>
+                  <li><em><a href="/pl/firefox/collections/?sort=created">Najnowsze</a></em></li>
+                <hr>
+        <li><a href="/pl/firefox/collections/mine/">
+          Moje kolekcje</a></li>
+        <li><a href="/pl/firefox/collections/following/">
+          Obserwowane kolekcje</a></li>
+                <li><a href="/pl/firefox/collections/mine/favorites">
+          Moje ulubione dodatki</a></li>
+      </ul>
+          </li>
+    <li id="more">
+      <a href="#">Więcej&hellip;</a>
+      <ul>
+                  <li class="more-mobile"><a href="/pl/android">
+            Dodatki dla Mobile</a></li>
+                <li class="more-lang"><a href="/pl/firefox/language-tools/">
+          Słowniki i pakiety językowe</a></li>
+        <li><a href="/pl/firefox/search-tools/">Search Tools</a></li>
+        <li><a href="/pl/developers/">Strefa autora</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                                  </div>
+                                                                                                      <div class="site-balloon" id="site-nonfx">
+                      <p>
+                        Aby wypróbować tysiące dostępnych tu dodatków, pobierz program <a href="http://mozilla.org/firefox/?src=amo">Mozilla Firefox</a> – szybki i darmowy sposób przeglądania sieci!                      </p>
+                      <a href="#" class="close">Zamknij</a>
+                    </div>
+                                    <div class="site-balloon" id="site-welcome">
+                                        <h3>Witamy na witrynie Dodatki dla programu Firefox.</h3>
+                    <p>
+                                              Wybierz spośród tysięcy dodatkowych funkcji i motywów, by dostosować program Firefox do swoich potrzeb.                                          </p>
+                    <a href="#" class="close">Zamknij</a>
+                  </div>
+                  <div class="site-balloon" id="mobile-banner">
+                    <h3>Jesteś w podróży?</h3>
+                    <p>
+                      Sprawdź naszą witrynę <a class="mobile-link" href="#">dodatków dla Firefoksa Mobile</a>.                    </p>
+                    <a href="#" class="close">Zamknij</a>
+                  </div>
+                                <div itemscope itemtype="http://schema.org/WebApplication">
+  <link itemprop="SoftwareApplicationCategory" href="http://schema.org/OtherApplication" />
+  <aside class="secondary addon-vitals">
+
+        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <meta itemprop="price" content="$0" />
+      <meta itemprop="priceCurrency" content="USD" />
+      <link itemprop="availability" href="http://schema.org/InStock" />
+    </span>
+
+    <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+      <meta content="3.4615" itemprop="ratingValue">
+        <span class="stars large stars-3" title="Oceniono na 3 z 5 możliwych gwiazdek">
+      Oceniony jako 3/5  </span>
+
+
+      <div>
+        <a id="reviews-link" href="/pl/firefox/addon/gnome-shell-integration/reviews/">
+          <span itemprop="ratingCount">13</span> user reviews        </a>
+      </div>
+    </div>
+
+                                                    <div id="daily-users">
+                  <a class="stats" title="Zobacz statystyki"
+             href="/pl/firefox/addon/gnome-shell-integration/statistics/">12 863 użytkowników</a>
+                <meta itemprop="interactionCount" content="UserDownloads:20460" />
+      </div>
+    
+    <div class="widgets">
+      
+      <a class="collection-add widget collection"
+  data-listurl="/pl/firefox/collections/ajax/list"
+  data-addurl="/pl/firefox/collections/ajax/add"
+  data-removeurl="/pl/firefox/collections/ajax/remove"
+  data-newurl="/pl/firefox/collections/ajax/new"
+  data-addonid="751081"
+  title=""
+  href="#"
+  >
+  Dodaj do kolekcji
+</a>    </div>
+              </aside>
+
+  
+    <section class="primary addon-description-header">
+    <div id="addon" class="island c" role="main" data-id="751081">
+      <hgroup>
+                <img id="addon-icon" itemprop="image" src="https://addons.cdn.mozilla.net/user-media/addon_icons/751/751081-64.png?modified=1491448820" class="icon" alt="Ikona Integracja z GNOME Shell">
+        <h1 class="addon">
+          <span itemprop="name">Integracja z GNOME Shell</span>
+                      <span class="version-number" itemprop="version">8.2.1</span>
+                            </h1>
+        <h4 class="author">Autor: <a href="/pl/firefox/user/ne0sight/" title="Yuri &lt;nE0sIghT&gt; Konotopov">Yuri &lt;nE0sIghT&gt; Konotopov</a></h4>
+      </hgroup>
+      <p id="addon-summary" itemprop="description" >To rozszerzenie dostarcza integrację z GNOME Shell i repozytorium rozszerzeń <a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/b16ff805576d83628b80265636b483e6f56c58d6e812e04045626ff602eff739/https%3A//extensions.gnome.org">https://extensions.gnome.org</a></p>
+              <div class="install-wrapper ">
+<div class="install-shell">
+<div class="install "
+       data-addon="751081"
+  data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/751/751081-32.png?modified=1491448820"
+  data-developers="/pl/firefox/addon/gnome-shell-integration/developers"
+  data-versions="/pl/firefox/addon/751081/versions/"
+  data-name="Integracja z GNOME Shell"
+  
+  data-min="52.0"
+  data-max="*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download prominent platform linux"
+  data-hash="sha256:97f4c7840b2f5fd398cf8c8b4dd24eea5805cedb0bfef13be88911c0c7a63e7e"
+      href="/firefox/downloads/latest/gnome-shell-integration/platform:2/addon-751081-latest.xpi?src=dp-btn-primary"
+  >
+      <b></b>
+    <span>
+      Pobierz
+              <span class="os" data-os="Linux">
+                                  dla Linux
+                  </span>
+          </span>
+  </a>
+      </p>
+</div> 
+
+  <div class="detailed">
+          <a class="webext-permissions badge" href="#">
+      Uprawnienia
+    </a>
+    </div>
+  
+      <div class="d2c-reasons-popup popup">
+      <p>Ten dodatek nie jest kompatybilny z twoją wersją programu Firefox z następujących powodów:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Pobierz mimo wszystko</a>
+</p>
+</div> </div>
+                </div>
+
+    
+
+          <div class="notice c author">
+                  <h3>
+            Meet the Developer: <a href="/pl/firefox/addon/gnome-shell-integration/developers">Yuri &lt;nE0sIghT&gt; Konotopov</a>          </h3>
+          <img class="avatar" alt="Yuri &lt;nE0sIghT&gt; Konotopov" height="64" alt=""
+               width="64" src="https://addons.cdn.mozilla.net/user-media/userpics/4/4922/4922563.png?modified=1479487750"/>
+          <p>Dowiedz się, dlaczego dodatek Integracja z GNOME Shell został stworzony, i co nowego jest planowane.</p>
+              </div>
+      </section>
+</div>
+              </div>
+            </div>           </div>         
+                                              
+  
+      <section class="previews">
+      <div class="carousel">
+        <a href="#" class="control prev">&laquo;</a>
+        <a href="#" class="control next">&raquo;</a>
+        <ul id="preview" class="slider"><li class="panel">
+              <a class="screenshot thumbnail" rel="jquery-lightbox"
+                 href="https://addons.cdn.mozilla.net/user-media/previews/full/181/181047.png?modified=1482307847" title="">
+                                <img src="https://addons.cdn.mozilla.net/user-media/previews/thumbs/181/181047.png?modified=1482307847" alt="Obrazek dodatku #1">
+              </a>
+            </li></ul>
+      </div>
+    </section>
+    <div id="lightbox">
+      <section>
+        <div class="content">
+          <a class="close" href="#">Close</a>
+        </div>
+        <div class="controls">
+          <a href="#" class="control next">&raquo;</a>
+          <a href="#" class="control prev">&laquo;</a>
+          <div class="caption"><span></span></div>
+        </div>
+      </section>
+    </div>
+  
+<aside class="secondary metadata c">
+  <ul class="links">
+          <li><a class="home" href="https://outgoing.prod.mozaws.net/v1/8cab3f17bd584d17255571e732399855941ecdb94c7c50b508c2cd1f8636f613/https%3A//wiki.gnome.org/Projects/GnomeShellIntegrationForChrome">
+        Strona domowa</a></li>
+              </ul>
+      <ul>
+      <li>Wersja 8.2.1 <a class="scrollto" href="#detail-relnotes">Informacje</a></li>
+      <li>Ostatnia aktualizacja: March 24, 2017</li>
+      <li class="source-license">
+                                      Wydany na licencji <a href="http://www.gnu.org/licenses/gpl-3.0.html">General Public Licence, wersja 3.0</a>                        </li>
+    </ul>
+  </aside>
+
+<section class="primary island c">
+  <h2>Więcej o tym dodatku</h2>
+  <div class="prose">
+      <div id="addon-description" class="prose" >Należy zainstalować natywnego łącznika, aby to rozszerzenie mogło działać.<br><br>Dla systemu Arch Linux dostępny jest pakiet PKGBUILD w repozytorium AUR: <a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/042706886ebbf83750184994fbbaa1db75be0da8b6ccb2472c3b384d586af3e6/https%3A//aur.archlinux.org/packages/chrome-gnome-shell-git">https://aur.archlinux.org/packages/chrome-gnome-shell-git</a><br><br>Dla systemu Debian Linux dostępny jest pakiet w wersjach Sid i Stretch: <a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/223b034681e1e89eb8e37eed052c72d1ca55b6e16e89a7e9ba9473e7c6293024/https%3A//tracker.debian.org/pkg/chrome-gnome-shell">https://tracker.debian.org/pkg/chrome-gnome-shell</a><br><br>Dla systemu Fedora dostępny jest pakiet w repozytorium Copr: <a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/c5cc75899d5bd15fcfe23cf86a7c6cf9aace9d5eab697cd5f5baaf9d6eb45298/https%3A//copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell">https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell</a><br><br>W systemie Gentoo Linux można go zainstalować za pomocą polecenia:<br>emerge gnome-extra/chrome-gnome-shell<br><br>Dla systemu Ubuntu dostępny jest pakiet w repozytorium PPA „ne0sight/chrome-gnome-shell”. Polecenia instalacji:<br>sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell<br>sudo apt-get update<br>sudo apt-get install chrome-gnome-shell<br><br>Można także zainstalować łącznika ręcznie. Instrukcje instalacji: <a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/3eaff83c9640f382eaae8121be6daa0d74237b71aec358c494c596895273d2f1/https%3A//wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation">https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation</a></div>
+    </div>
+</section>
+
+<div id="more-webpage" class="primary c" data-more-url="/pl/firefox/addon/gnome-shell-integration/more"></div>
+
+<section class="primary island more-island">
+  
+      <section id="detail-relnotes" class="expando">
+      <h2>Informacje o wersji<a class="toggle" href="#detail-relnotes"><b></b></a></h2>
+      <div class="content listing">
+        <div class="items">
+          <div class="version item" id="version-8.2.1">
+  <div class="info">
+    <h3><a href="/pl/firefox/addon/gnome-shell-integration/versions/8.2.1"
+           title="Stały odnośnik do tej wersji">
+      Wersja 8.2.1</a>
+      <span class="meta">
+        <time datetime="2017-03-24T15:41:48Z">
+                    Wydany dnia March 24, 2017
+        </time>
+                  <span class="filesize">
+            173.4 KiB
+          </span>
+              </span>
+              <span class="meta compat">
+                    Działa z
+                      Firefox 52.0 i późniejsze        </span>
+          </h3>
+
+    <div class="desc prose"  lang="en-us" dir="ltr">
+      == Changes ==<br> * Firefox: show usefull error message instead of "Attempt to postMessage on disconnected port" in case native connector not installed.<br> * Fixed compatibility issue with Firefox 54+.<br><br>== Known issues ==<br> * Version 8.2.1 source tarball is not published at ftp. Look to <a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/12eb6c07da49799e3189dfbf59894eab1ef4207186038c44ec21db51dd2037d5/https%3A//git.gnome.org/browse/chrome-gnome-shell/log/%3Fh=release/v8.2.1">https://git.gnome.org/browse/chrome-gnome-shell/log/?h=release/v8.2.1</a> for source code.<br> * Native host connector is not working in Google Chrome and Opera when installed via Debian Stretch or Sid<br>   repositories. To know "why?" look<br>   here (<a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/be66d915de30fc210fb063a9f4b14b011d9b8cb7bc16db91f545840fa769946c/https%3A//github.com/nE0sIghT/chrome-gnome-shell-mirror/issues/17%29">https://github.com/nE0sIghT/chrome-gnome-shell-mirror/issues/17)</a>,<br>   here (<a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/3586218fec1ef2a98db4d8e0aa1d863b169c9ae80f92ab374c882bfc19b162de/https%3A//bugs.debian.org/cgi-bin/bugreport.cgi%3Fbug=840804">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=840804</a>) and<br>   here (<a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/1bbd76d86d65b5a2c751a4b9746578ac184b1568b350c8cc668e0fab331e92e4/https%3A//bugs.debian.org/cgi-bin/bugreport.cgi%3Fbug=840235%29">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=840235)</a>. For a workaround<br>   look here<br>   (<a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/bd310bfc8b8be614cd1d1e6d305323f6139eec77bba1896975106b240fedc6f9/https%3A//wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation%23Troubleshooting%29">https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation#Troubleshooting)</a>.<br> * Web extension is broken on FreeBSD because of bug 212925<br>   (<a rel="nofollow" href="https://outgoing.prod.mozaws.net/v1/1815992ec1249ece29515d743face9a724cdc9c539c1f809d57e1904bf25fcb8/https%3A//bugs.freebsd.org/bugzilla/show_bug.cgi%3Fid=212925%29">https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=212925)</a>.
+    </div>
+
+    <ul class="source">
+                  <li>
+                      Kod źródłowy wydany na licencji <a href="http://www.gnu.org/licenses/gpl-3.0.html">General Public Licence, wersja 3.0</a>                  </li>
+        <li>
+          <a class="license-faq" href="/pl/faq#license">
+            Co to jest?</a>
+        </li>
+              <li>
+        <a class="source-code"
+           href="/pl/firefox/files/browse/615929/">
+          Podgląd źródła</a>
+      </li>
+        </ul>
+
+  </div>
+  <div class="action">
+          
+<div class="install-shell">
+<div class="install "
+       data-addon="751081"
+  data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/751/751081-32.png?modified=1491448820"
+  data-developers="/pl/firefox/addon/gnome-shell-integration/developers"
+  data-versions="/pl/firefox/addon/751081/versions/"
+  data-name="Integracja z GNOME Shell"
+  
+  data-min="52.0"
+  data-max="*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download platform linux"
+  data-hash="sha256:97f4c7840b2f5fd398cf8c8b4dd24eea5805cedb0bfef13be88911c0c7a63e7e"
+      href="https://addons.mozilla.org/firefox/downloads/file/615929/gnome_shell_integration-8.2.1-an+fx-linux.xpi?src=dp-btn-version"
+  >
+      <b></b>
+    <span>
+      Pobierz
+              <span class="os" data-os="Linux">
+                                  dla Linux
+                  </span>
+          </span>
+  </a>
+      </p>
+</div> 
+
+
+      <div class="d2c-reasons-popup popup">
+      <p>Ten dodatek nie jest kompatybilny z twoją wersją programu Firefox z następujących powodów:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Pobierz mimo wszystko</a>
+</p>
+</div> 
+      </div>
+</div>
+        </div>
+        <p class="more c">
+          <a class="more-info" href="/pl/firefox/addon/gnome-shell-integration/versions/">
+            Zobacz całą historię wersji
+          </a>
+        </p>
+      </div>
+    </section>
+  
+  </section>
+
+
+</div>
+              </div>
+      <div id="tooltip">
+        <span></span>
+      </div>
+      <div id="popup-staging">
+        <div id="add-to-collection" class="popup">
+          <div class="collection-add-login">
+            <p>Aby tworzyć własne kolekcje, musisz mieć konto na witrynie Mozilla Add-ons.</p>
+            <p class="register-button">
+              <a class="button" href="https://oauth.accounts.firefox.com/v1/authorization?action=signup&amp;scope=profile&amp;state=82b9618735253fca0074c682ed6bb124ba06d701c462fdc34f22e6f1bc3a5f83%3AL3BsL2ZpcmVmb3gvYWRkb24vZ25vbWUtc2hlbGwtaW50ZWdyYXRpb24v&amp;redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthenticate%2F&amp;client_id=a4907de5fa9d78fc">Utwórz konto</a>
+            </p>
+            <p>
+              lub <a href="https://oauth.accounts.firefox.com/v1/authorization?action=signin&amp;scope=profile&amp;state=82b9618735253fca0074c682ed6bb124ba06d701c462fdc34f22e6f1bc3a5f83%3AL3BsL2ZpcmVmb3gvYWRkb24vZ25vbWUtc2hlbGwtaW50ZWdyYXRpb24v&amp;redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthenticate%2F&amp;client_id=a4907de5fa9d78fc">zaloguj się na swoje obecne konto</a>            </p>
+          </div>
+        </div>
+                <div class="modal" id="webext-permissions">
+      <a href="#" class="close">zamknij</a>
+      <h2>Uprawnienia</h2>
+                      <div class="prose">
+          <p>
+          Some add-ons ask for permission to perform certain functions (example: a tab management add-on will ask permission to access your browser’s tab system).
+          </p><p>
+          Since you’re in control of your Firefox, the choice to grant or deny these requests is yours. Accepting permissions does not inherently compromise your browser’s performance or security, but in some rare cases risk may be involved.
+          </p>
+        </div>
+        <div>
+          <p>
+                        <h3>This add-on can:</h3>
+            <ul class="webext-permissions-list">
+                              <li class="webext-permissions-list"><details><summary>Access your data on the following websites:</summary><ul><li>https://extensions.gnome.org/</li><li>https://extensions.gnome.org/*</li></ul></details></li>
+                              <li class="webext-permissions-list">Wymienianie wiadomości z programami innymi niż Firefox</li>
+                              <li class="webext-permissions-list">Wyświetlanie powiadomień</li>
+                              <li class="webext-permissions-list">Dostęp do kart przeglądarki</li>
+                          </ul>
+          </p>
+        </div>
+          </div>
+            <div id="abuse-modal" class="modal">
+      <a href="#" class="close">zamknij</a>
+      <h2>Zgłoś nadużycie</h2>
+      <form method="post" action="/pl/firefox/addon/gnome-shell-integration/abuse/" data-no-csrf="anon-only">
+  
+  <fieldset class="abuse">
+        <ol >
+      <li>
+        <p>Jeśli podejrzewasz, że ten dodatek narusza <a href="https://developer.mozilla.org/en-US/Add-ons/AMO/Policy">nasze zasady</a>, ma problemy z bezpieczeństwem lub zachowaniem prywatności – użyj poniższego formularza, by opisać swoje obawy. Nie używaj tego formularza z innych powodów.</p>
+      </li>
+      <li>
+        <textarea cols="40" id="id_text" name="text" rows="10">
+</textarea>
+        
+      </li>
+              <script src='https://www.google.com/recaptcha/api.js?hl=pl' async defer></script>
+<div class="g-recaptcha" data-sitekey="6LcsBhYTAAAAAKpVTZ16Lh7nmTxVRKoKSr8e3vsV"></div>
+<noscript>
+  <div style="width: 302px; height: 484px;">
+    <div style="width: 302px; height: 424px; position: relative;">
+      <div style="width: 302px; height: 424px; position: absolute;">
+        <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LcsBhYTAAAAAKpVTZ16Lh7nmTxVRKoKSr8e3vsV&amp;hl=pl"
+                frameborder="0" scrolling="no"
+                style="width: 302px; height:424px; border-style: none;">
+        </iframe>
+      </div>
+    </div>
+    <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+      <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                class="g-recaptcha-response"
+                style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                       margin: 10px 25px; padding: 0px; resize: none;" >
+      </textarea>
+    </div>
+  </div>
+</noscript>
+        
+            <li class="footer-submit">
+        <button type="submit">Wyślij zgłoszenie</button>
+              </li>
+    </ol>
+  </fieldset>
+</form>
+    </div>
+        </div>
+    </div>
+          <div id="footer" role="contentinfo">
+        <div class="section">
+                    <img class="footerlogo" src="https://addons.cdn.mozilla.net/static/img/zamboni/footer-logo-med.png?b=6f8764e8-58e63811" alt="Logo stopki">
+                                <div class="links-footer">
+  <ul>
+    <li>poznaj <b>dodatki</b></li>
+    <li><a href="/pl/about">Wszystko o…</a></li>
+    <li><a href="http://blog.mozilla.com/addons">Blog</a></li>
+    <li class="footer-devhub-link"><a href="/pl/developers/">Strefa autora</a></li>
+    <li><a href="/pl/faq">FAQ</a></li>
+    <li><a href="https://discourse.mozilla-community.org/c/add-ons">Forum</a></li>
+  </ul>
+</div>
+<div id="footer-content">
+                <form class="languages go" id="lang_form" method="get" action="" data-no-csrf>
+          <label for="language">Inne języki</label>
+          <select id="language" name="lang" dir="ltr">
+            <option value="af" >
+                Afrikaans
+              </option><option value="ar" >
+                عربي
+              </option><option value="bg" >
+                Български
+              </option><option value="bn-bd" >
+                বাংলা (বাংলাদেশ)
+              </option><option value="ca" >
+                Català
+              </option><option value="cs" >
+                Čeština
+              </option><option value="da" >
+                Dansk
+              </option><option value="de" >
+                Deutsch
+              </option><option value="dsb" >
+                Dolnoserbšćina
+              </option><option value="el" >
+                Ελληνικά
+              </option><option value="en-gb" >
+                English (British)
+              </option><option value="en-us" >
+                English (US)
+              </option><option value="es" >
+                Español
+              </option><option value="eu" >
+                Euskara
+              </option><option value="fa" >
+                فارسی
+              </option><option value="fi" >
+                suomi
+              </option><option value="fr" >
+                Français
+              </option><option value="ga-ie" >
+                Gaeilge
+              </option><option value="he" >
+                עברית
+              </option><option value="hsb" >
+                Hornjoserbsce
+              </option><option value="hu" >
+                magyar
+              </option><option value="id" >
+                Bahasa Indonesia
+              </option><option value="it" >
+                Italiano
+              </option><option value="ja" >
+                日本語
+              </option><option value="ka" >
+                ქართული
+              </option><option value="kab" >
+                Taqbaylit
+              </option><option value="ko" >
+                한국어
+              </option><option value="mk" >
+                Македонски
+              </option><option value="mn" >
+                Монгол
+              </option><option value="nl" >
+                Nederlands
+              </option><option value="nn-no" >
+                Norsk nynorsk
+              </option><option value="pl" selected>
+                Polski
+              </option><option value="pt-br" >
+                Português (do Brasil)
+              </option><option value="pt-pt" >
+                Português (Europeu)
+              </option><option value="ro" >
+                Română
+              </option><option value="ru" >
+                Русский
+              </option><option value="sk" >
+                slovenčina
+              </option><option value="sl" >
+                Slovenščina
+              </option><option value="sq" >
+                Shqip
+              </option><option value="sv-se" >
+                Svenska
+              </option><option value="uk" >
+                Українська
+              </option><option value="vi" >
+                Tiếng Việt
+              </option><option value="zh-cn" >
+                中文 (简体)
+              </option><option value="zh-tw" >
+                正體中文 (繁體)
+              </option>          </select>
+                    <noscript><button type="submit">Przejdź</button></noscript>
+        </form>
+            <div id="copyright">
+  <p id="footer-links">
+          <a href="https://www.mozilla.org/privacy/websites/">
+        Polityka prywatności
+      </a> &nbsp;|&nbsp;
+      <a href="https://www.mozilla.org/about/legal/">
+        Informacje prawne
+      </a> &nbsp;|&nbsp;
+      <a href="https://www.mozilla.org/about/legal/fraud-report/">
+        Report Trademark Abuse
+      </a>
+                        &nbsp;|&nbsp;<a class="mobile-link" href="#">Przejdź do witryny Mobile</a>
+                &nbsp;|&nbsp;<a href="https://status.mozilla.org/#addons.mozilla.org_service_history">Site Status </a>
+        &nbsp;|&nbsp;<a href="https://developer.mozilla.org/Add-ons/AMO/Policy/Contact">Report a bug</a>
+            </p>
+  <p>
+    Except where otherwise <a href="https://www.mozilla.org/about/legal/">noted</a>, content on this site is licensed under the <br /> <a href="https://creativecommons.org/licenses/by-sa/3.0/"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version.  </p>
+</div>    </div>
+                  </div>       </div>                   <script src="https://addons.cdn.mozilla.net/pl/firefox/jsi18n.js?b=6f8764e8-58e63811"></script>
+      <script src="https://addons.cdn.mozilla.net/static/js/impala-min.js?build=6f8764e8-58e63811"></script>
+      <script async defer src="https://addons.cdn.mozilla.net/pl/firefox/addons/buttons.js?b=6f8764e8-58e63811"></script>
+                </body>
+</html>��]�,�      X�>X�F=��       E    :https://addons.mozilla.org/pl/firefox/addon/gnome-shell-integration/ necko:classified 1 strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAfNMIIHyTCCBrGgAwIBAgIQD2YBPt0CaUnfGaRk56rTEjANBgkqhkiG9w0BAQsFADB1MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTQwMgYDVQQDEytEaWdpQ2VydCBTSEEyIEV4dGVuZGVkIFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTE1MDczMTAwMDAwMFoXDTE3MDkyMTEyMDAwMFowggEIMR0wGwYDVQQPDBRQcml2YXRlIE9yZ2FuaXphdGlvbjETMBEGCysGAQQBgjc8AgEDEwJVUzEbMBkGCysGAQQBgjc8AgECEwpDYWxpZm9ybmlhMREwDwYDVQQFEwhDMjU0MzQzNjEeMBwGA1UECRMVNjUwIENhc3RybyBTdCBTdGUgMzAwMQ4wDAYDVQQREwU5NDA0MTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxGzAZBgNVBAoTEk1vemlsbGEgRm91bmRhdGlvbjEbMBkGA1UEAxMSYWRkb25zLm1vemlsbGEub3JnMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3jJG6kmDY1p/wbvK6lC/CIggEwsLOXPlOq+uy8sn9NNIZyYQ7M0bEBW+DERxY8O7DTb8thPOxJSURCVufbdCKfwynPeB1LdouA5UKxJluXlRQudBYzjqdsFN4Fp8Xkx69maOo/LpAb/QWxU66iaN0aOW34T6WDTqlwZ16km9+hK6wX4qAa5ubidtcoSE932nN3qrBfp+Wmiazph53J3/z6B1dA2EAo+5YN3IR/ypziNnJdXPfa4x8iEVnGgnfWKQHYgVuNRZ4XdihYINIIfz+Ahj67OLGI/oPqgtsyTGub3W1GstcqTIl2VcF+acPZY+6mNMDqDKxYZRmoIaAzczAQIDAQABo4IDvjCCA7owHwYDVR0jBBgwFoAUPdNQpdagre7zSmAKZdMh1Pj41g8wHQYDVR0OBBYEFMlYS6CjLUJkL+ZxrL10vDjwuyZbMGsGA1UdEQRkMGKCEmFkZG9ucy5tb3ppbGxhLm9yZ4IRYWRkb24ubW96aWxsYS5vcmeCG3NlcnZpY2VzLmFkZG9ucy5tb3ppbGxhLm9yZ4IcZGlzY292ZXJ5LmFkZG9ucy5tb3ppbGxhLm9yZzAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHUGA1UdHwRuMGwwNKAyoDCGLmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9zaGEyLWV2LXNlcnZlci1nMS5jcmwwNKAyoDCGLmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWV2LXNlcnZlci1nMS5jcmwwSwYDVR0gBEQwQjA3BglghkgBhv1sAgEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzAHBgVngQwBATCBiAYIKwYBBQUHAQEEfDB6MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wUgYIKwYBBQUHMAKGRmh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJFeHRlbmRlZFZhbGlkYXRpb25TZXJ2ZXJDQS5jcnQwDAYDVR0TAQH/BAIwADCCAX0GCisGAQQB1nkCBAIEggFtBIIBaQFnAHYApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFUGr5XNQAABAMARzBFAiBaW/XwBQKCJzZKJ25FFmzmIpbueU9SlaYlaDd2lGFQ8QIhAMzdjj1i72TMWaiyFHIlcEEBposADw8u2IARMYZCwE7xAHUAaPaY+B9kgr46jO65KB1M/HFRXWeT1ETRCmesu09P+8QAAAFUGr5XLwAABAMARjBEAiAlxhs3gwDNe6YNjd8YQiAmVCjLRSin+4bUUAJeFFxwjQIgUiVyjmeeXMB/LO/O7TxU77MJUsqoEx2eaXfsL+t0VyUAdgBWFAaaL9fC7NP14b1Esj7HRna5vJkRXMDvlJhV1onQ3QAAAVQavll0AAAEAwBHMEUCIQCuVjE0Ku+wsOhCyrvqBbZzboLkujFA7ZcuivKXg8S02AIgREiCCExrGuP30Dbl+ULzBqnPSVIF6jfj51jnxr2r3wcwDQYJKoZIhvcNAQELBQADggEBAA7+fGZpugTyB8BF7/VgQvWsu+oN7CQhJu9G3pNFpDOrmTyatzr/ope+Zxf7dYxBUnIssW9HxzO0vc6XMl99wFp6JMt2L32UN7G8QnslB1E8lylV9W1b2V1k+VrSlBhtxotsOLHhy4ywcUklga2gJw5LwpNCvhc6RzgurHsnxEe7CnYT01Q2dhgXRTuVMSWERxH4ElwYu3xfXgtfcUTdHtWlDfj4Zdjj5JWnzH9RLWP264rR+xUzFyxVLvynGk9N7S+k3VwKTxen/zeba8IPExRapLqVN5iNxRQo0yfw9u52ahPADcDQw7rYk06gjLmp+jxS+vjCtnQeyFe2pxWGAqvALwEDAAAAAQEBAAACAA== request-method GET request-User-Agent Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0 response-head HTTP/1.1 200 OK
+content-security-policy: script-src https://ssl.google-analytics.com/ga.js https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://www.paypalobjects.com/js/external/dg.js https://addons.cdn.mozilla.net; style-src 'self' 'unsafe-inline' https://addons.cdn.mozilla.net; default-src 'self'; frame-src 'self' https://ic.paypal.com https://paypal.com https://www.google.com/recaptcha/ https://www.paypal.com; child-src 'self' https://ic.paypal.com https://paypal.com https://www.google.com/recaptcha/ https://www.paypal.com; img-src 'self' data: blob: https://www.paypal.com/webapps/checkout/ https://www.paypal.com/webapps/hermes/api/logger https://ssl.google-analytics.com https://addons.cdn.mozilla.net https://static.addons.mozilla.net https://sentry.prod.mozaws.net; media-src https://videos.cdn.mozilla.net; object-src 'none'; connect-src 'self' https://sentry.prod.mozaws.net; font-src 'self' https://addons.cdn.mozilla.net; form-action 'self' https://developer.mozilla.org; base-uri 'self' https://addons.mozilla.org; report-uri /__cspreport__
+Content-Type: text/html; charset=utf-8
+Date: Tue, 11 Apr 2017 16:15:58 GMT
+Etag: "4a3c3ac89d69e50b1492d6b1d253b394"
+Public-Key-Pins: max-age=5184000; includeSubDomains; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E="
+Server: nginx
+Strict-Transport-Security: max-age=31536000
+Vary: X-Requested-With, X-Mobile, User-Agent
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+ original-response-headers content-security-policy: script-src https://ssl.google-analytics.com/ga.js https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://www.paypalobjects.com/js/external/dg.js https://addons.cdn.mozilla.net; style-src 'self' 'unsafe-inline' https://addons.cdn.mozilla.net; default-src 'self'; frame-src 'self' https://ic.paypal.com https://paypal.com https://www.google.com/recaptcha/ https://www.paypal.com; child-src 'self' https://ic.paypal.com https://paypal.com https://www.google.com/recaptcha/ https://www.paypal.com; img-src 'self' data: blob: https://www.paypal.com/webapps/checkout/ https://www.paypal.com/webapps/hermes/api/logger https://ssl.google-analytics.com https://addons.cdn.mozilla.net https://static.addons.mozilla.net https://sentry.prod.mozaws.net; media-src https://videos.cdn.mozilla.net; object-src 'none'; connect-src 'self' https://sentry.prod.mozaws.net; font-src 'self' https://addons.cdn.mozilla.net; form-action 'self' https://developer.mozilla.org; base-uri 'self' https://addons.mozilla.org; report-uri /__cspreport__
+Content-Type: text/html; charset=utf-8
+Date: Tue, 11 Apr 2017 16:15:58 GMT
+Etag: "4a3c3ac89d69e50b1492d6b1d253b394"
+Public-Key-Pins: max-age=5184000; includeSubDomains; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E="
+Server: nginx
+Strict-Transport-Security: max-age=31536000
+Vary: X-Requested-With, X-Mobile, User-Agent
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
+Connection: keep-alive
+ uncompressed-len 0 predictor::resource-count 30 predictor::https://addons.cdn.mozilla.net/static/css/tabzilla/tabzilla.css 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/static/css/zamboni/impala-min.css?build=5cb8048 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/static/css/restyle/css-min.css?build=af9519e 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/static/js/preload-min.js?build=6f8764e8-58e63811 1,1,1491927358,4097 net-response-time-onstart 304 net-response-time-onstop 515 predictor::https://addons.cdn.mozilla.net/static/img/icons/firefox.png?b=6f8764e8-58e63811 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/user-media/addon_icons/751/751081-64.png?modified=1491448820 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/user-media/userpics/4/4922/4922563.png?modified=1479487750 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/user-media/previews/thumbs/181/181047.png?modified=1482307847 1,1,1491927358,4097 predictor::https://www.google.com/recaptcha/api.js?hl=pl 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/static/img/zamboni/footer-logo-med.png?b=6f8764e8-58e63811 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/pl/firefox/jsi18n.js?b=6f8764e8-58e63811 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/static/js/impala-min.js?build=6f8764e8-58e63811 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/pl/firefox/addons/buttons.js?b=6f8764e8-58e63811 1,1,1491927358,4097 predictor::https://ssl.google-analytics.com/ga.js 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/static/img/tabzilla/tabzilla-static.png 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/img/icons/search.png?eaad389 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/img/icons/go-arrow.png?ad8fa66 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/img/impala/stars-16.png?c518520 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/img/impala/button-icons.png?76a8a6e 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/img/impala/home.png?54712b2 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/img/impala/loading-more.gif?4b3afb8 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/img/impala/expando-large.png?4f1cc6f 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/css/impala/fonts/OpenSans-Regular.ttf?629a55a 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/css/impala/fonts/OpenSans-Bold.ttf?5014568 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/css/impala/fonts/OpenSans-Italic.ttf?c7dcce0 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/img/impala/search-stem.png?11fc7d4 1,1,1491927358,4096 predictor::https://www.gstatic.com/recaptcha/api2/r20170404141150/recaptcha__pl.js 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/static/img/impala/banner-close-style-refresh.png?3241be0 1,1,1491927358,4096 predictor::https://addons.cdn.mozilla.net/static/img/icons/collection.png 1,1,1491927358,4097 predictor::https://addons.cdn.mozilla.net/static/img/impala/stars.png?5f99704 1,1,1491927358,4096   �T

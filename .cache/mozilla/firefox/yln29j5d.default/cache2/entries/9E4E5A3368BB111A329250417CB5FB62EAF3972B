@@ -1,0 +1,385 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>  region51/chrome-gnome-shell
+ Copr</title>
+  <script src="/static/components/jquery/dist/jquery.min.js"></script>
+  <script src="/static/components/jquery-ui/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="/static/components/jquery-ui/jquery-ui.min.css" />
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <link href="/static/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <link href="/static/css/custom-styles.css" rel="stylesheet" media="screen, print">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../components/respond/dest/respond.min.js"></script>
+  <![endif]-->
+  <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+  <!-- IE8 requires jQuery v1.x -->
+  <script src="/static/components/jquery/dist/jquery.min.js"></script>
+  <script src="/static/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/static/components/datatables/media/js/jquery.dataTables.js"></script>
+  <script src="/static/js/patternfly.min.js"></script>
+
+  <script src="/static/copr.js"></script>
+  <link rel=stylesheet type=text/css href="/static/copr.css">
+  <link rel=stylesheet type=text/css href="/static/css/style-overwrite.css">
+</head>
+
+<body>
+  <!-- BANNER -->
+
+  <!-- MAIN MENU -->
+  <nav class="" id="main-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-7 col-xs-6">
+          <a href="/coprs/">
+            <img id="logo" src="/static/copr_logo.png" alt="Copr Build System">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-5 col-xs-6">
+          <div id="login-menu" class="text-right">
+
+          <a href="/login/">log in</a>
+|          <a href="https://admin.fedoraproject.org/accounts/user/new">sign up</a>
+
+          </div>
+          <form role="search" method="get" action="/coprs/fulltext/">
+            <div class="input-group menu-search">
+              <input name="fulltext" type="text" class="form-control" placeholder="Search projects by name, os or arch" value="">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="breadcrumb-panel">
+    <div class="container">
+<ol class="breadcrumb">
+  <li  >
+  <a href="/coprs/">
+    Home
+  </a>
+</li>
+
+    <li  >
+  <a href="/coprs/region51/">
+    region51
+  </a>
+</li>
+
+  <li  >
+  <a href="/coprs/region51/chrome-gnome-shell/">
+    chrome-gnome-shell
+  </a>
+</li>
+
+
+<li class="active">
+  Overview
+</li>
+</ol>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div id=content>
+    <div class="container">
+
+      <!-- Flash messages -->
+
+      <!-- the actual content -->
+
+
+<!-- PROJECT NAME -->
+<div style="margin-bottom:16px;margin-top:16px">
+  <h1 class="project-name" style="display:inline;">
+  <a href="/coprs/region51/">region51</a><!--
+  --> / <!--
+  --><strong><a href="/coprs/region51/chrome-gnome-shell/">chrome-gnome-shell</a></strong>
+</h1>
+</div>
+
+
+
+
+
+<!-- MENU -->
+<ul class="nav nav-tabs">
+
+    <li class="active">
+  <a href="/coprs/region51/chrome-gnome-shell/"> <span class="fa fa-home"></span>&nbsp;    Overview
+  </a>
+</li>
+
+    <li class="">
+  <a href="/coprs/region51/chrome-gnome-shell/packages/"> <span class="fa fa-archive"></span>&nbsp;    Packages
+  </a>
+</li>
+
+    <li class="">
+  <a href="/coprs/region51/chrome-gnome-shell/builds/"> <span class="fa fa-tasks"></span>&nbsp;    Builds
+  </a>
+</li>
+
+    <li class="">
+  <a href="/coprs/region51/chrome-gnome-shell/modules/"> <span class="fa fa-rocket"></span>&nbsp;    Modules
+  </a>
+</li>
+
+    <li class="">
+  <a href="/coprs/region51/chrome-gnome-shell/monitor/"> <span class="fa fa-desktop"></span>&nbsp;    Monitor
+  </a>
+</li>
+
+
+</ul>
+
+<div class="row">
+  <div class="col-sm-8 col-md-9">
+    <h3>Description</h3>
+    <p><p>Browser extension for Google Chrome/Chromium, Firefox, Vivaldi, Opera (and other Browser Extension, Chrome Extension or WebExtensions capable browsers) and native host messaging connector that provides integration with GNOME Shell and the corresponding extensions repository <a href="https://extensions.gnome.org/">https://extensions.gnome.org</a>.</p>
+<p>Current version is 8.2.1</p>
+<p><a href="http://storage1.static.itmages.com/i/16/0908/h_1473367421_3705081_f3916571b0.png">Screenshot</a></p>
+    </p>
+
+
+    <h3>Installation Instructions</h3>
+    <p><pre><code># dnf copr enable region51/chrome-gnome-shell
+# dnf install chrome-gnome-shell
+</code></pre>
+    </p>
+
+    <h3>Active Releases</h3>
+    <p>
+        The following unofficial repositories are provided as-is
+        by owner of this project.
+        Contact the owner directly for bugs or issues (IE: not bugzilla).
+    </p>
+
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Release</th>
+          <th>Architectures</th>
+          <th>Repo Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+                <img style="height:1.8em" src="/static/chroot_logodir/fedora.png" />
+    Fedora 24
+
+          </td>
+          <td>
+              i386
+              <small class="text-muted"> (6)*</small>,               x86_64
+              <small class="text-muted"> (334)*</small>          </td>
+          <td class="rightmost">
+            <a class="btn btn-default btn-margin" href="https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell/repo/fedora-24/region51-chrome-gnome-shell-fedora-24.repo">
+              <span class="pficon pficon-save"></span> Fedora 24
+            </a>
+            <small class="text-muted"> (16 downloads) </small>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <img style="height:1.8em" src="/static/chroot_logodir/fedora.png" />
+    Fedora 25
+
+          </td>
+          <td>
+              i386
+              <small class="text-muted"> (21)*</small>,               x86_64
+              <small class="text-muted"> (4904)*</small>          </td>
+          <td class="rightmost">
+            <a class="btn btn-default btn-margin" href="https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell/repo/fedora-25/region51-chrome-gnome-shell-fedora-25.repo">
+              <span class="pficon pficon-save"></span> Fedora 25
+            </a>
+            <small class="text-muted"> (0 downloads) </small>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <img style="height:1.8em" src="/static/chroot_logodir/fedora.png" />
+    Fedora 26
+
+          </td>
+          <td>
+              i386
+              <small class="text-muted"> (0)*</small>,               x86_64
+              <small class="text-muted"> (253)*</small>          </td>
+          <td class="rightmost">
+            <a class="btn btn-default btn-margin" href="https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell/repo/fedora-26/region51-chrome-gnome-shell-fedora-26.repo">
+              <span class="pficon pficon-save"></span> Fedora 26
+            </a>
+            <small class="text-muted"> (0 downloads) </small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="text-muted"><small> * Total number of packages downloaded in the last seven days.</small></p>
+
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <br>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <a class="btn btn-default" href="https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome" title="https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome">
+            <span class="fa fa-home"></span> Homepage
+          </a>
+
+          <a class="btn btn-default" href="mailto:murmansksity@gmail.com" title="murmansksity@gmail.com">
+            <span class="fa fa-user"></span> Contact
+          </a>
+        </div>
+      </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"> Last Build </h3>
+      </div>
+      <div class="list-group">
+        <a href="/coprs/region51/chrome-gnome-shell/build/535302/" class="list-group-item">
+          <h4 class="list-group-item-heading">chrome-gnome-shell</h4>
+          <p class="list-group-item-text">
+            <small> Build: </small>
+            535302
+          </p>
+          <p class="list-group-item-text">
+            <small> State: </small>
+            <span class="build-succeeded">
+              succeeded
+            </span>
+          </p>
+          <p class="list-group-item-text">
+            <small> Finished: </small>
+            9 days ago
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"> Quick Enable </h3>
+      </div>
+      <div class="panel-body">
+        <div class="well well-sm">
+          dnf copr enable   region51/chrome-gnome-shell
+
+        </div>
+        <a href="https://docs.pagure.org/copr.copr/how_to_enable_repo.html#how-to-enable-repo" target="_blank">
+          <small><span class="pficon pficon-info"></span> More info about enabling Copr repositories</small></a>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"> Other Actions </h3>
+      </div>
+      <div class="panel-body">
+
+
+        <a href="/coprs/region51/chrome-gnome-shell/report-abuse">
+          <small><span class="pficon pficon-warning-triangle-o"></span> Report Abuse </small>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="footer">
+      <div>
+        <div class="container text-muted">
+          <div class="">
+            <div class="row">
+              <div class="col-sm-4">
+                <dl>
+<dt><h3>Copr Project</h3></dt>
+<dd>
+  <ul>
+    <li><a href="https://pagure.io/copr/copr">Project Homepage</a></li>
+    <li><a href="https://docs.pagure.org/copr.copr/user_documentation.html">User Documentation</a></li>
+    <li><a href="https://bugzilla.redhat.com/enter_bug.cgi?product=Copr">Report a Bug</a></li>
+    <li><a href="https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=MODIFIED&bug_status=ON_QA&classification=Community&list_id=6150623&product=Copr&query_format=advanced">Known Issues</a></li>
+    <li><a href="https://docs.pagure.org/copr.copr/user_documentation.html#faq">FAQ</a></li>
+  </ul>
+</dd>                </dl>
+              </div>
+              <div class="col-sm-4">
+                <dl>
+                  <dt><h3>Site Navigation</h3></dt>
+                  <dd>
+                    <ul>
+                      <li> <a href="/coprs/">Home</a> </li>
+                      <li> <a href="/status/importing/">Task Queue</a> </li>
+                      <li> <a href="/api/">API</a> </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div class="col-sm-4">
+                <dl>
+                  <dt><h3>Powered by</h3></dt>
+                  <dd>
+                    <ul>
+                      <li><a href="https://www.python.org">Python</a></li>
+                      <li><a href="http://www.openstack.org">OpenStack</a></li>
+                      <li><a href="https://www.patternfly.org">PatternFly</a></li>
+                      <li><a href="https://github.com/release-engineering/dist-git">Dist Git</a></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <!-- <small class="text-muted">
+              Build 1.107-1.git.2.ad3b2cd.fc25
+            </small> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- FEDORA MENU -->
+  <script src="https://apps.fedoraproject.org/fedmenu//js/fedora-libravatar.js"></script>
+  <script src="https://apps.fedoraproject.org/fedmenu//js/fedmenu.js"></script>
+  <script>
+    fedmenu({
+        'url': 'https://apps.fedoraproject.org/js/data.js',
+        'mimeType': 'application/javascript',
+        'position': 'bottom-right',
+        'user': 'region51',
+    });
+  </script>
+</body>
+</html>Ç:-ﬂU      XÌvXÌy=£ÅC       E    :https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 11 Apr 2017 16:25:26 GMT
+Server: Apache/2.4.25 (Fedora) OpenSSL/1.0.2k-fips mod_wsgi/4.4.23 Python/2.7.13
+Strict-Transport-Security: max-age=15768000; preload
+Content-Length: 12481
+Content-Type: text/html; charset=utf-8
+ original-response-headers Date: Tue, 11 Apr 2017 16:25:26 GMT
+Server: Apache/2.4.25 (Fedora) OpenSSL/1.0.2k-fips mod_wsgi/4.4.23 Python/2.7.13
+Strict-Transport-Security: max-age=15768000; preload
+Content-Length: 12481
+Set-Cookie: session=55b4fc7c-4bfd-40b6-9a92-1e0008cd8320; HttpOnly; Path=/
+Keep-Alive: timeout=5, max=99
+Connection: Keep-Alive
+Content-Type: text/html; charset=utf-8
+ uncompressed-len 0 predictor::resource-count 27 predictor::https://copr.fedorainfracloud.org/static/components/jquery/dist/jquery.min.js 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/components/jquery-ui/jquery-ui.min.js 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/components/jquery-ui/jquery-ui.min.css 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/css/patternfly.min.css 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/css/custom-styles.css 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/components/bootstrap/dist/js/bootstrap.min.js 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/components/datatables/media/js/jquery.dataTables.js 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/js/patternfly.min.js 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/copr.js 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/copr.css 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/css/style-overwrite.css 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/copr_logo.png 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/chroot_logodir/fedora.png 1,1,1491927926,4097 net-response-time-onstart 236 net-response-time-onstop 435 predictor::https://apps.fedoraproject.org/fedmenu//js/fedora-libravatar.js 1,1,1491927926,4097 predictor::https://apps.fedoraproject.org/fedmenu//js/fedmenu.js 1,1,1491927926,4097 predictor::https://copr.fedorainfracloud.org/static/header_background.png 1,1,1491927926,4096 predictor::https://copr.fedorainfracloud.org/static/fonts/OpenSans-Regular-webfont.woff 1,1,1491927926,4096 predictor::https://copr.fedorainfracloud.org/static/fonts/OpenSans-Bold-webfont.woff 1,1,1491927926,4096 predictor::https://copr.fedorainfracloud.org/static/components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 1,1,1491927926,4096 predictor::https://copr.fedorainfracloud.org/static/fonts/OpenSans-Semibold-webfont.woff 1,1,1491927926,4096 predictor::https://copr.fedorainfracloud.org/static/components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0 1,1,1491927926,4096 predictor::https://copr.fedorainfracloud.org/static/fonts/OpenSans-Light-webfont.woff 1,1,1491927926,4096 predictor::https://copr.fedorainfracloud.org/static/fonts/PatternFlyIcons-webfont.ttf 1,1,1491927926,4096 predictor::https://apps.fedoraproject.org/fedmenu//css/fedmenu.css 1,1,1491927926,4097 predictor::https://apps.fedoraproject.org/js/data.js 1,1,1491927926,4097 predictor::https://seccdn.libravatar.org/avatar/f1117708de1a3d6a5c0dae74f671bcfce42ae11805fc81af804b1a3e52783d70?s=64&d=retro 1,1,1491927926,4097 predictor::https://apps.fedoraproject.org/fedmenu//img/logo.png 1,1,1491927926,4096   0¡

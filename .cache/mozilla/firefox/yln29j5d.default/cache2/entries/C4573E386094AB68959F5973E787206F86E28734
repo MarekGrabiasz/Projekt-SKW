@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta content='initial-scale=1.0,width=device-width' name='viewport'><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>Projects/GnomeShellIntegrationForChrome/Installation - GNOME Wiki!</title>
+<script type="text/javascript" src="/gnome/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/gnome/gnome/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/gnome/gnome/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/gnome/gnome/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/gnome/gnome/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/gnome/gnome/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="GNOME Wiki!: Projects/GnomeShellIntegrationForChrome/Installation" href="/action/rss_rc/Projects/GnomeShellIntegrationForChrome/Installation?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Projects%2FGnomeShellIntegrationForChrome%2FInstallation&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="/Home">
+<link rel="Alternate" title="Wiki Markup" href="/Projects/GnomeShellIntegrationForChrome/Installation?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/Projects/GnomeShellIntegrationForChrome/Installation?action=print">
+<link rel="Up" href="/Projects/GnomeShellIntegrationForChrome">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+  <div id="container">
+  <div id="header">
+    <!-- global gnome.org domain bar -->
+    <div id="global_domain_bar">
+      <div id="header_tabs">
+        <div id="user_tab" class="tab">
+<ul id="username"><li><span id="pagelocation"><span class="pagepath"><a href="/Projects">Projects</a><span class="sep">/</span><a href="/Projects/GnomeShellIntegrationForChrome">GnomeShellIntegrationForChrome</a></span><span class="sep">/</span><a href="/Projects/GnomeShellIntegrationForChrome/Installation">Installation</a></span></li><li class="wikilink"><a href="/Home"><span>Home</span></a></li><li class="wikilink"><a href="/RecentChanges"><span>RecentChanges</span></a></li><li class="wikilink"><a href="/Schedule"><span>Schedule</span></a></li><li><a href="/action/login/Projects/GnomeShellIntegrationForChrome/Installation?action=login" id="login" rel="nofollow">Login</a></li></ul>
+
+        </div>
+        <div id="site_tab" class="tab">
+          <a class="root" href="https://www.gnome.org/">GNOME.org</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end site header -->
+  <div id="main_content">
+
+
+<div class="body" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div dir="ltr" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Header.content" lang="en"><span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Header.top"></span>
+<span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Header.line-1"></span><span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Header.line-2"></span><span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Header.line-3"></span><div><table style="width:100%;  text-align:center;"><tbody><tr>  <td style="border: 0"><p class="line862"> <a href="/Projects/GnomeShellIntegrationForChrome">Main</a> ‚Ä¢ <a href="/Projects/GnomeShellIntegrationForChrome/Installation">Installation</a> ‚Ä¢ <a href="/Projects/GnomeShellIntegrationForChrome/Translations">Translations</a> ‚Ä¢ <a href="/Projects/GnomeShellIntegrationForChrome/RoadMap">RoadMap</a> ‚Ä¢ <a href="/Projects/GnomeShellIntegrationForChrome/ReleaseNotes">ReleaseNotes</a> </td>
+</tr>
+</tbody></table></div><span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Header.line-4"></span><span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Header.bottom"></span></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="GNOME_Shell_integration_for_Chrome_Installation_Guide">GNOME Shell integration for Chrome Installation Guide</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867"><div dir="ltr" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Installation.2BAC8-LanguagesHeader.content" lang="en"><span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Installation.2BAC8-LanguagesHeader.top"></span>
+<span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Installation.2BAC8-LanguagesHeader.line-1"></span><div><table style="margin: 0 auto;  text-align:center;"><tbody><tr style="background-color: #ffffe0">  <td><p class="line862"> <a class="https" href="https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation">English</a> </td>
+  <td><p class="line862"> <a class="https" href="https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation/pt_BR">Portugu√™s (Brasil)</a> </td>
+  <td><p class="line891"><a class="https" href="https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation/ru">–†—É—Å—Å–∫–∏–π</a> </td>
+</tr>
+</tbody></table></div><span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Installation.2BAC8-LanguagesHeader.line-2"></span><span class="anchor" id="Projects.2BAC8-GnomeShellIntegrationForChrome.2BAC8-Installation.2BAC8-LanguagesHeader.bottom"></span></div> <span class="anchor" id="line-6"></span><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#GNOME_Shell_integration_for_Chrome_Installation_Guide">GNOME Shell integration for Chrome Installation Guide</a><ol><li>
+<a href="#Distro_packages">Distro packages</a><ol><li>
+<a href="#Arch_Linux">Arch Linux</a></li><li>
+<a href="#Debian_Linux">Debian Linux</a></li><li>
+<a href="#Fedora_Linux">Fedora Linux</a></li><li>
+<a href="#Gentoo_Linux">Gentoo Linux</a></li><li>
+<a href="#Ubuntu_Linux">Ubuntu Linux</a></li><li>
+<a href="#FreeBSD">FreeBSD</a></li></ol></li><li>
+<a href="#Cmake_installation">Cmake installation</a></li><li>
+<a href="#Troubleshooting">Troubleshooting</a></li></ol></li></ol></div> <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line867">
+<h2 id="Distro_packages">Distro packages</h2>
+<span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line874">The easiest way to install extension and connector is use your distro's favorite package manager. <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line862">If there is no package in your distro you can install extension via <a class="https" href="https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep">Chrome web store</a> and native connector using cmake. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><p class="line862">Chrome policy will be installed along with connector that forces extension installation from Chrome store for <strong>Google Chrome/Chromium</strong> and <strong>Vivaldi</strong> browsers. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line862">For <strong>Firefox</strong> you should manually install extension from <a class="https" href="https://addons.mozilla.org/en/firefox/addon/gnome-shell-integration/">Mozilla Addons site</a>. Please note that Firefox is supported since connector version 8. <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line862">For <strong>Opera</strong> you should manually install extension from <a class="https" href="https://addons.opera.com/en/extensions/details/gnome-shell-integration/">Opera Addons site</a>. Please note that Opera is supported since connector version 7. <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line867">
+<h3 id="Arch_Linux">Arch Linux</h3>
+<span class="anchor" id="line-21"></span><p class="line862">PKGBUILD available in the AUR: <a class="https" href="https://aur.archlinux.org/packages/chrome-gnome-shell-git/">chrome-gnome-shell-git</a>. <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line867">
+<h3 id="Debian_Linux">Debian Linux</h3>
+<span class="anchor" id="line-24"></span><p class="line862">Package is available in Sid and Stretch: <a class="https" href="https://tracker.debian.org/pkg/chrome-gnome-shell">chrome-gnome-shell</a>. <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line862">Please note, that Debian package is only supports Chromium. Google Chrome and Opera are not supported in Debian package. For details <a class="https" href="https://github.com/nE0sIghT/chrome-gnome-shell-mirror/issues/17#issuecomment-257210176">look to this issue</a>. <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line874">For a workaround look into the Troubleshooting section. <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line867">
+<h3 id="Fedora_Linux">Fedora Linux</h3>
+<span class="anchor" id="line-31"></span><p class="line862">Package is available in Fedora Copr: <a class="https" href="https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell//">region51/chrome-gnome-shell</a>. To install it type: <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><pre><span class="anchor" id="line-1"></span># dnf copr enable region51/chrome-gnome-shell
+<span class="anchor" id="line-2"></span># dnf install chrome-gnome-shell</pre><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line867">
+<h3 id="Gentoo_Linux">Gentoo Linux</h3>
+<span class="anchor" id="line-38"></span><p class="line874">Ebuild is available in main tree. Just type as root user: <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><pre><span class="anchor" id="line-1-1"></span># emerge -av gnome-extra/chrome-gnome-shell</pre><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><p class="line867">
+<h3 id="Ubuntu_Linux">Ubuntu Linux</h3>
+<span class="anchor" id="line-44"></span><p class="line862">Package is available in <a class="https" href="https://launchpad.net/ubuntu/+source/chrome-gnome-shell">Universe repositories</a> <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line874">To install package type: <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><pre><span class="anchor" id="line-1-2"></span>$ sudo apt-get install chrome-gnome-shell</pre><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line867">
+<h3 id="FreeBSD">FreeBSD</h3>
+<span class="anchor" id="line-52"></span><p class="line862">FreeBSD is not supported, sorry. Ask www/chromium maintainer to fix <a class="https" href="https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=212925">bug 212925</a>. <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><p class="line867">
+<h2 id="Cmake_installation">Cmake installation</h2>
+<span class="anchor" id="line-55"></span><p class="line874">First of all make sure following dependencies are installed: <span class="anchor" id="line-56"></span><ul><li>Build time <span class="anchor" id="line-57"></span><ul><li>Python 2.7+ or 3.x (also runtime dependency) <span class="anchor" id="line-58"></span></li><li>Cmake 2.8 (or newer) <span class="anchor" id="line-59"></span></li><li><p class="line891"><a class="https" href="https://www.gnu.org/software/coreutils/coreutils.html">Coreutils</a> <span class="anchor" id="line-60"></span></li><li><p class="line891"><a class="https" href="https://stedolan.github.io/jq/">jq</a> <span class="anchor" id="line-61"></span></li></ul></li><li>Runtime <span class="anchor" id="line-62"></span><ul><li><p class="line891"><a class="https" href="https://wiki.gnome.org/Projects/GnomeShell">GNOME Shell</a> <span class="anchor" id="line-63"></span></li><li><p class="line891"><a href="/PyGObject">PyGObject</a> <span class="anchor" id="line-64"></span></li><li><p class="line891"><a class="nonexistent" href="/python-requests.org">Python Requests 2.x</a> <span class="anchor" id="line-65"></span></li><li>DBus <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span></li></ul></li></ul><p class="line874">Then clone source repository or download latest release tarball. To make git clone type: <span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><pre><span class="anchor" id="line-1-3"></span>$ git clone git://git.gnome.org/chrome-gnome-shell</pre><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><p class="line862">Web extension sources located in "extension" folder. Refer <a class="https" href="https://developer.chrome.com/extensions/getstarted#unpacked">Google Chrome documentation</a> for information about installation of unpacked extension. <span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><p class="line874">All commands must be issued from the root of cloned repository. <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><ol type="1"><li>Create build folder and go to it:   <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><pre><span class="anchor" id="line-1-4"></span>$ mkdir build
+<span class="anchor" id="line-2-1"></span>$ cd build</pre><span class="anchor" id="line-81"></span></li><li>Run cmake to create makefiles:   <span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><pre><span class="anchor" id="line-1-5"></span>$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_EXTENSION=OFF ../</pre><span class="anchor" id="line-85"></span></li><li>Install connector:   <span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><pre><span class="anchor" id="line-1-6"></span>$ sudo make install</pre><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span></li></ol><p class="line867">
+<h2 id="Troubleshooting">Troubleshooting</h2>
+<span class="anchor" id="line-91"></span><p class="line867"><strong>Problem</strong>: <span class="anchor" id="line-92"></span><ul><li style="list-style-type:none">You had uninstalled native connector package. Web extension still installed in browser and you can not uninstall it because it "installed by enterprise policy". <span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span></li></ul><p class="line867"><strong>Resolution</strong>: <span class="anchor" id="line-95"></span><ul><li style="list-style-type:none">Your package manager did not uninstalled policy files. You should remove them manually: <span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><pre><span class="anchor" id="line-1-7"></span># rm /etc/opt/chrome/policies/managed/chrome-gnome-shell.json
+<span class="anchor" id="line-2-2"></span># rm /etc/chromium/policies/managed/chrome-gnome-shell.json</pre><span class="anchor" id="line-100"></span>If you had installed native connector via package manager you also should report this issue to package maintainer. <span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-103"></span><strong>Problem</strong>: <span class="anchor" id="line-104"></span><ul><li style="list-style-type:none">You are using Google Chrome or Opera in Debian and getting "Native connector not installed" error. <span class="anchor" id="line-105"></span></li></ul><p class="line867"><strong>Resolution</strong>: <span class="anchor" id="line-106"></span><ul><li style="list-style-type:none">Debian package does not support Google Chrome and Opera. <span class="anchor" id="line-107"></span><p class="line862">For details <a class="https" href="https://github.com/nE0sIghT/chrome-gnome-shell-mirror/issues/17#issuecomment-257210176">look to this issue</a>. <span class="anchor" id="line-108"></span>As a workaround you can copy all json files from <tt class="backtick">/etc/chromium/native-messaging-hosts</tt> to <tt class="backtick">/etc/opt/chrome/native-messaging-hosts</tt>. <span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-111"></span><strong>Problem</strong>: <span class="anchor" id="line-112"></span><ul><li style="list-style-type:none">You are using Firefox and getting high CPU usage and crash when closing browser. <span class="anchor" id="line-113"></span></li></ul><p class="line867"><strong>Resolution</strong>: <span class="anchor" id="line-114"></span><ul><li style="list-style-type:none"><p class="line862">Probably you have HTitle addon installed that break every <a class="nonexistent" href="/WebExtension">WebExtension</a> with native messaging. Uninstall it or switch off it's option "Detect GNOME Shell". <span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><p class="line862">If you do not have HTitle addon installed then you might hit <a class="https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1342850">Firefox bug 1342850</a>. You may vote for this bug to get it fixed faster. <span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><p class="line862">For more information look to <a class="https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1337799">Mozilla bugtracker</a>. <span class="anchor" id="line-119"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">Projects/GnomeShellIntegrationForChrome/Installation  (last edited 2017-04-01 22:58:22 by <span title="rafaelff @ 186-247-146-110.user.veloxzone.com.br[186.247.146.110]"><a href="/RafaelFontenelle" title="rafaelff @ 186-247-146-110.user.veloxzone.com.br[186.247.146.110]">RafaelFontenelle</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+
+  <!-- end of main content -->
+  </div>
+  <!-- site footer -->
+  <div id="footer">
+    <!-- footer image -->
+    <div id="footer_image">
+      &nbsp;
+    </div>
+    <!-- footer grass -->
+    <div id="footer_grass">
+      &nbsp;
+    </div>
+    <div id="footer_container">
+      <div id="footer_content">
+
+
+        <div id="search">
+
+<form id="searchform" method="get" action="/Projects/GnomeShellIntegrationForChrome/Installation">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+
+        </div>
+        <div id="copyright">
+        Copyright &copy; 2005 - <span id="current-year"></span> <a href="https://www.gnome.org/">The GNOME Project</a>.
+        Hosted by <a href="http://www.redhat.com/">Red Hat</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of footer -->
+
+  <script type="text/javascript">document.getElementById('current-year').innerHTML = new Date().getFullYear();</script>
+  </div>
+  <!-- End of container --></body>
+</html>
+
+‘≈	¶à      XÌ/XÌ/=£É"       L    :https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAX4MIIF9DCCBNygAwIBAgIRAI7bzLG/JscxCXWcmjfzd5wwDQYJKoZIhvcNAQELBQAwXzELMAkGA1UEBhMCRlIxDjAMBgNVBAgTBVBhcmlzMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UEChMFR2FuZGkxIDAeBgNVBAMTF0dhbmRpIFN0YW5kYXJkIFNTTCBDQSAyMB4XDTE2MTEwOTAwMDAwMFoXDTE3MTEwOTIzNTk1OVowXzEhMB8GA1UECxMYRG9tYWluIENvbnRyb2wgVmFsaWRhdGVkMSQwIgYDVQQLExtHYW5kaSBTdGFuZGFyZCBXaWxkY2FyZCBTU0wxFDASBgNVBAMMCyouZ25vbWUub3JnMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEArS3oMv3ehUxHGzHiWNRmlbndhSLooN56ubFB3LZYXHMwUD/WgfjGtuUq5GjLV4wZVG+gTkofzSghdsM8M59pN47coI8mJHiSD8evKu3/u0Ez+Bd4HHiHd6dmVj63fKq/sGxPnJhWpNy7UxlIqIMSrYBtHDUtwkVuyw8GkF/SHQu/qCloTCumoOBVZVtAuIddC5o7fofMkn4WZxvEK4uUCgYbjAbWwpfwljpFzfL0kMKXWQLIhQvT1XHLIxe3S6UtfRTcCIZi4I3yde9U5HSmJBsFJNlJIgPiM/xuMZ7+k6E9XvWGH4kXG6+KkrU+b8pWzgMr4RS9eeCCSRtS57+0gQhk7VLMlreOtEsiYWjQBb9rDjOeBSeVnozCOEu7fUPlh33/KZHO6j040R4bveF/UAGdlaR0Bq/2NX/L/kXbMJWb1rRuZ76gnrhDjsW/yRJpaAV2wl1M4NmALf5jJWWDOG16GuJDuRKyHn9kk0eBeTuUV3pe6wqrh34+1PF8IjgIFsxpmznbRjk1vh4l9DHlcE/OxYjUzrSXNWR21iKsp+L53ytriJREdA3NE75L4YJ+CTXSXT7al/26tvkKjAjQUchz6lWGiSyA8iJJPFKgaH0xBy+eoompZ6kfLuThKpFQWhw+xdDznwFxD1Ft8CH9CbWbDxknUBG3ApQLkTRdwHUCAwEAAaOCAakwggGlMB8GA1UdIwQYMBaAFLOQp9jJr07NYTyffK1df0H9aTDqMB0GA1UdDgQWBBQEZWcnZfrK2D9GvhmH+kJId4uGvjAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSwYDVR0gBEQwQjA2BgsrBgEEAbIxAQICGjAnMCUGCCsGAQUFBwIBFhlodHRwczovL2Nwcy51c2VydHJ1c3QuY29tMAgGBmeBDAECATBBBgNVHR8EOjA4MDagNKAyhjBodHRwOi8vY3JsLnVzZXJ0cnVzdC5jb20vR2FuZGlTdGFuZGFyZFNTTENBMi5jcmwwcwYIKwYBBQUHAQEEZzBlMDwGCCsGAQUFBzAChjBodHRwOi8vY3J0LnVzZXJ0cnVzdC5jb20vR2FuZGlTdGFuZGFyZFNTTENBMi5jcnQwJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLnVzZXJ0cnVzdC5jb20wIQYDVR0RBBowGIILKi5nbm9tZS5vcmeCCWdub21lLm9yZzANBgkqhkiG9w0BAQsFAAOCAQEAfJ3NID5wLoLSeEfKoh2eJ+rJ6ZscGg5y7zNHFnekUs18ccI1XhAHDPVkV206j/DNLtrGJWlLTq8LD10yk2zSRMXlaUyrZ2kZ2IDb5AEnPX8cnOY75POkcS1OB91z1WYnWnqJifezWnW1DNTw6UaJf+iBf00HnrjnddgbDu+3SIr6M5oWPQMdGd12ZCb9tSt4HCK6dFlJaH3c1F1utfErYkjDBiuDQ8SIZZR90e+f8SNhM1KI6QnLX+S8tHw5IUMpGz5pTzzaV/Z992L51tnmvhZEmOH0L9lzFs6B7AhO9VCozBJIBpX+CQnlu4G3e418qPsNdO0Di9wow3QzKOFUasAwAQMAAAAAAQEAAAEA request-method GET request-Cookie SN7+BMWTttEgfbC4ZaVHyr+oKTs= request-User-Agent Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0 response-head HTTP/1.1 200 OK
+Date: Tue, 11 Apr 2017 16:19:22 GMT
+Server: Apache/2.2.15 (Red Hat)
+Vary: Cookie,User-Agent
+Content-Type: text/html; charset=utf-8
+ original-response-headers Date: Tue, 11 Apr 2017 16:19:22 GMT
+Server: Apache/2.2.15 (Red Hat)
+Vary: Cookie,User-Agent
+Content-Type: text/html; charset=utf-8
+Set-Cookie: MOIN_SESSION_80_ROOT=e7b6a9d6622fbe8f7784e73a0647eaef88ac5896; expires=Tue, 11-Apr-2017 18:19:00 GMT; Max-Age=7200; Path=/
+Connection: close
+Transfer-Encoding: chunked
+ uncompressed-len 0 predictor::resource-count 13 predictor::https://wiki.gnome.org/gnome/common/js/common.js 1,1,1491927855,12288 predictor::https://wiki.gnome.org/gnome/gnome/css/common.css 1,1,1491927855,12288 predictor::https://wiki.gnome.org/gnome/gnome/css/screen.css 1,1,1491927855,12288 predictor::https://wiki.gnome.org/gnome/gnome/css/print.css 1,1,1491927855,12288 predictor::https://wiki.gnome.org/gnome/gnome/css/projection.css 1,1,1491927855,12288 net-response-time-onstart 1553 net-response-time-onstop 1950 predictor::https://static.gnome.org/wiki.gnome.org/gnome/css/layout.css 1,1,1491927855,12288 predictor::https://static.gnome.org/wiki.gnome.org/gnome/css/style.css 1,1,1491927855,12288 predictor::https://fonts.googleapis.com/css?family=Cantarell 1,1,1491927855,12288 predictor::https://static.gnome.org/wiki.gnome.org/gnome/css/screen.css 1,1,1491927855,12288 predictor::https://static.gnome.org/wiki.gnome.org/gnome/css/html-bg.png 1,1,0,8192 predictor::https://static.gnome.org/wiki.gnome.org/gnome/css/favicon.png 1,1,0,8192 predictor::https://static.gnome.org/wiki.gnome.org/gnome/css/default.png 1,1,0,8192 predictor::https://static.gnome.org/wiki.gnome.org/gnome/css/grass.png 1,1,0,8192 necko:classified 1   Rn

@@ -1,0 +1,852 @@
+@import url("switch.1edf5d664d16.css");
+@import url("jquery.rating.9b618401f93e.css");
+@import url("jquery.colorbox.f77cd6777ec7.css");
+
+/* -> Action Button */
+
+span.action_button {
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* User Profile */
+/* ==================================================================== */
+
+.profile ul {
+    padding-left: 0px;
+}
+
+/* Unreviewed Extension Counter */
+/* ==================================================================== */
+
+div.nav.navbar-nav a.unreviewed_counter,
+div.navbar-header a.unreviewed_counter {
+    background-color: #3968A1;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0 5px;
+    border-radius: 4px;
+    margin-top: 13px;
+    margin-right: 10px;
+    border: 1px solid #195EB1;
+}
+
+div.nav.navbar-nav a.unreviewed_counter:hover,
+div.navbar-header a.unreviewed_counter:hover {
+    background-color: #195EB1;
+}
+
+/* Login Area */
+/* ==================================================================== */
+
+#auth_form  {
+    padding: 0;
+    margin: 0;
+}
+
+#auth_form h3 {
+    color: #0489B7;
+}
+
+#auth_form li, #auth_form ol {
+    list-style-type: none;
+}
+
+#auth_form ul {
+    padding: 0px;
+}
+
+#auth_form ul > li {
+    margin-bottom: 15px;
+}
+
+#auth_form .helptext {
+    display: block;
+}
+
+#auth_form label {
+    display: inline-block;
+    line-height: 1.8;
+    vertical-align: top;
+}
+
+#auth_form input {
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+#auth_form input:focus {
+    border-color: #66afe9;
+    outline: 0;
+}
+
+
+/* Paginator, Filtering and Sorting UI */
+/* ==================================================================== */
+
+.paginator {
+    display: block;
+    background-color: #eeeeec;
+    border-radius: 3px;
+    border: 1px solid #babdb6;
+    padding: 3px;
+}
+
+.paginator.loading {
+    background-image: url("../images/spinner.7b9776076d5f.gif");
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+.paginator .number {
+    display: inline-block;
+    min-width: 1.5em;
+    text-align: center;
+    margin: 0 4px;
+    border-radius: 4px;
+}
+
+.paginator .number,
+.fsui-dropdown-link {
+    border-radius: 4px;
+    cursor: pointer;
+
+    text-decoration: none;
+    color: #204a87;
+
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.fsui-dropdown-link {
+    padding: 0.2em 0.4em;
+    margin: 0 0.6em;
+}
+
+.paginator .number:hover,
+.fsui-dropdown-link:hover {
+    background-color: #f4f4f4;
+}
+
+.paginator .number.current,
+.fsui-dropdown-link.selected {
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #222;
+}
+
+.paginator .number.current {
+    border: 1px solid rgb(200, 200, 200);
+    cursor: default;
+}
+
+.paginator .number:first-child {
+    margin-left: 0;
+}
+
+.paginator .number:last-child {
+    margin-right: 0;
+}
+
+.paginator-content {
+    text-align: center;
+}
+
+.fsui {
+    float: right;
+    font-size: 0.8em;
+    position: relative;
+    top: -1.9em;
+}
+
+.fsui-dropdown-link-arrow {
+    position: relative;
+    margin-left: .25em;
+    top: -.25em;
+}
+
+.fsui-dropdown {
+    background-color: #fff;
+    position: absolute;
+    margin-top: -4px;
+    border-radius: 4px 0 4px 4px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.fsui-dropdown ul {
+    margin: 0;
+    padding: 0;
+}
+
+.fsui-dropdown-item {
+    text-decoration: none;
+    color: #444;
+    list-style-position: inside;
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 0;
+    padding: .2em 1em .2em 2em;
+}
+
+.fsui-dropdown-item.selected {
+    list-style-type: disc;
+    padding-left: 1em;
+}
+
+.fsui-dropdown-item:hover {
+    background-color: #e5e5e0;
+}
+
+
+/* Extension Views */
+/* ==================================================================== */
+
+#extensions-list {
+    position: relative;
+    padding-left: 0;
+}
+
+ul.extensions {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+li.extension {
+    list-style-type: none;
+    list-style-position: inside;
+    margin-left: 0px;
+}
+
+li.extension, #local_extensions div.extension {
+    border-bottom: 1px solid #ccc;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+li.extension:last-child, #local_extensions div.extension:last-child {
+    border-bottom: 0;
+}
+
+.extension {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.extension.out-of-date > * {
+    opacity: 0.5;
+}
+
+.extension.out-of-date .uninstall-button,
+.extension.out-of-date .upgrade-button {
+    opacity: 1.0;
+}
+
+.extension .extension-name a {
+    color: #000;
+    text-decoration: none;
+}
+
+.extension .extension-name {
+    display: inline-block;
+    line-height: 32px;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.extension .extension-header {
+    float: left;
+}
+
+.extension .extension-header .extension-name {
+    margin-left: 0;
+}
+
+.extension .extension-name a:hover {
+    color: #445;
+}
+
+.extension .system-extension {
+    margin: 0;
+    margin-left: 36px;
+    font-size: 0.8em;
+    cursor: help;
+    display: none;
+}
+
+.extension.system .system-extension {
+    display: block;
+}
+
+.extension .author, .extension .author a {
+    color: #888;
+}
+
+.extension .author a:hover {
+    color: #666;
+}
+
+/* Upgrade, Configure, Uninstall buttons */
+
+.extension .controls {
+    float: right;
+    width: 180px;
+}
+
+.extension .controls * {
+    box-sizing: content-box;
+}
+
+.extension.single-page .extension-details {
+    /* 32px icon + 4px icon margin */
+    padding-left: 36px;
+}
+
+.extension.single-page .description {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.extension.single-page .controls {
+    width: auto;
+    margin-right: 32px;
+}
+
+.extension .extra-buttons {
+    float: left;
+    margin-top: 4px;
+}
+
+.extension .configure-button,
+.extension .upgrade-button,
+.extension .uninstall-button {
+    display: none;
+}
+
+.extension.configurable .configure-button,
+.extension.upgradable .upgrade-button,
+.extension.installed .uninstall-button {
+    float: left;
+
+    display: block;
+    height: 24px;
+    width: 24px;
+
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    text-align: center;
+    margin-right: 3px;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.extension.installed.system .uninstall-button {
+    display: none;
+}
+
+.extension.configurable .configure-button {
+    background-color: #4a90d9;
+    background-image: url("../images/configure-extension.2792420d2ac7.png");
+    border-color: #3465a4;
+}
+
+.extension.configurable .configure-button:hover {
+    background-color: #5ba1ff;
+    border-color: #5485c4;
+}
+
+.extension.upgradable .upgrade-button {
+    background-color: #60b94a;
+    background-image: url("../images/upgrade.f9e4a20cde19.png");
+    border-color: #559424;
+}
+
+.extension.upgradable .upgrade-button:hover {
+    background-color: #71ca5b;
+    border-color: #75a444;
+}
+
+.extension .uninstall-button {
+    background-color: #de2900;
+    background-image: url("../images/uninstall-extension.7250945dc51c.png");
+    border-color: #bf2000;
+}
+
+.extension .uninstall-button:hover {
+    background-color: #f22c00;
+    border-color: #d92400;
+}
+
+/* Extension switch */
+
+.extension ._gnome-switch {
+    margin-top: 4px;
+    margin-right: 0.5em;
+    float: left;
+}
+
+._gnome-switch.customized .error {
+    border-color: #a43465;
+    background-color: #d94a60;
+}
+
+.extension .description {
+    margin: 0.5em 32px 0.5em 36px;
+    font-size: 1.2em;
+    overflow: auto;
+    white-space: pre-line;
+}
+
+.extension textarea {
+    /* Sync with body selector at the top of the file, please.
+     * textareas don't inherit body fonts for whatever reason. */
+    font-family: Cantarell, 'Droid Sans', Ubuntu, 'DejaVu Sans', Arial, sans-serif;
+}
+
+.extension textarea, .extension input {
+    line-height: 1.6;
+    font-size: 100%;
+}
+
+/* Screenshots and Icons */
+
+.extension .screenshot {
+    background: #ffffff;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.extension .screenshot img {
+    max-width: 300px;
+    max-height: 200px;
+    -ms-interpolation-mode: bicubic;
+    image-rendering: optimizeQuality;
+}
+
+.extension .icon, .extension .icon img {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+
+.extension span.plugin-unknown {
+    background-image: url("../images/plugin-unknown.c5f2c45659af.png")
+}
+
+.extension .screenshot label.upload {
+    display: block;
+}
+
+@media screen and (max-width: 767px) {
+    .extension .screenshot {
+        text-align: center;
+    }
+}
+
+/* Uploader */
+
+.extension .upload {
+    cursor: pointer;
+}
+
+.extension .upload input {
+    display: none;
+}
+
+.extension .screenshot .upload {
+    text-align: center;
+}
+
+/* Various other things */
+
+.extension dt, .extension dd {
+    font-size: 1em;
+    display: inline-block;
+    padding: 0 1em 0 0;
+}
+
+.extension table {
+    width: 100%;
+}
+
+.extension th {
+    text-align: left;
+}
+
+.extension_status_toggle {
+    display: none;
+}
+
+.extension_status_toggle.visible {
+    display: table-cell;
+}
+
+.extension-status.rejected, option.reject {
+    color: #c00 !important;
+    font-weight: bold;
+}
+
+.extension-status.active, option.approve {
+    color: #0a0 !important;
+    font-weight: bold;
+}
+
+.version {
+    color: #6a6a6a;
+    font-size: smaller;
+}
+
+/* Error Reports */
+/* ==================================================================== */
+
+#error_report input[name=can_contact] {
+    margin-left: 1em;
+}
+
+#error_report textarea,
+#error_report div {
+    display: block;
+    width: 100%;
+    resize: vertical;
+    min-height: 80px;
+}
+
+#error_report textarea {
+    height: 300px;
+}
+
+#error_report div {
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-family: monospace;
+    white-space: pre;
+}
+
+#error_report .email {
+    display: block;
+    margin: .2em auto;
+
+    background-color: white;
+    color: #333;
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+/* Comments */
+/* ==================================================================== */
+
+#comments .loading {
+    background-image: url("../images/spinner.7b9776076d5f.gif");
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    margin-left: 8px;
+    line-height: 16px;
+}
+
+#comments .show-all {
+    font-weight: bold;
+    cursor: pointer;
+    color: #204a87;
+}
+
+#comments .show-all:hover {
+    color: #3465a4;
+}
+
+#comments .show-all.loading {
+    color: #eeeeec;
+    cursor: default;
+}
+
+.comment {
+    margin-left: 90px;
+}
+
+.comment .gravatar {
+    position: absolute;
+    margin-left: -90px;
+}
+
+.comment .rating-author {
+    overflow: hidden;
+}
+
+.comment .rating {
+    margin-right: 6px;
+    float: right;
+}
+
+.comment .comment-author {
+    font-weight: bold;
+}
+
+.comment time {
+    color: #999;
+}
+
+.comment .extension-creator-badge {
+    font-weight: bold;
+    background-color: rgb(255,255,200);
+    position: absolute;
+    margin-left: -90px;
+    padding: 0.2em;
+    z-index: 999;
+}
+
+.comments-holder {
+    margin-top: 20px;
+}
+
+/* Errors & Messages */
+/* ==================================================================== */
+
+p.message {
+    min-height: 42px;
+    display: block;
+    padding: .5em;
+    margin: 0 auto;
+    padding-left: 72px;
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    border: 1px solid rgba(33, 33, 33, 0.3);
+    border-top: 0;
+    box-sizing: content-box;
+}
+
+p.message:first-child {
+    border-radius: 6px 6px 0 0;
+    border-top: 1px solid rgba(33, 33, 33, 0.3);
+}
+
+p.message:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+p.message.error {
+    background-color: #fcc;
+    background-image: url("../images/error.42b2b2eadda9.png");
+}
+
+p.message.info {
+    background-color: #ccf;
+    background-image: url("../images/info.b4acc242db50.png");
+}
+
+p.message.warning {
+    background-color: #ebde71;
+    background-image: url("../images/warning.d6749682c04d.png");
+}
+
+#message_container {
+    margin-bottom: 1em;
+}
+
+.editable {
+    background: url("../images/edit.37d1f0720c6d.svg") right rgba(255, 255, 200, 0.8) no-repeat;
+    padding-right: 20px;
+}
+
+.errorlist {
+    color: #a94442;
+}
+
+/* Forms */
+/* ==================================================================== */
+
+input, textarea, input[type=submit], button {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #66afe9;
+    outline: 0;
+}
+
+/* Opinion form */
+/* ==================================================================== */
+
+#opinion_form {
+    overflow: hidden;
+}
+
+#opinion_form label {
+    display: block;
+}
+
+#opinion_form p input,
+#opinion_form p textarea {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#opinion_form p input:focus,
+#opinion_form p textarea:focus {
+    border-color: #66afe9;
+    outline: 0;
+}
+
+#opinion_form p textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#opinion_form input[type=submit] {
+    height: 32px;
+    float: right;
+}
+
+#opinion_form .comment_choice {
+    display: block;
+    font-size: 16pt;
+    margin-bottom: 30px;
+}
+
+#opinion_form .comment_choice a {
+    text-decoration: none;
+}
+
+#opinion_form .unauthenticated {
+    background: #eeeeec;
+    border: 1px solid #babdb6;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    clear: both;
+    padding: 20px;
+
+    /* Extra margin on the bottom, left and right is for
+     * the shadow -- we use overflow: hidden on the parent
+     * to establish a BFC, so it will clip the shadow. */
+    margin: 20px 4px 4px 4px;
+}
+
+
+/* Review List */
+/* ==================================================================== */
+
+.review {
+    background: #eeeeec;
+    border: 1px solid #babdb6;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.review a {
+    text-decoration: none;
+}
+
+.review a .extension-name {
+    font-size: 1.4em;
+    color: #000;
+}
+
+.review a:hover .extension-name {
+    color: #445;
+}
+
+.review abbr, .review .extension-version {
+    color: #666;
+    font-size: smaller;
+}
+
+.review abbr {
+    float: right;
+}
+
+.review blockquote {
+    padding: .5em;
+    white-space: pre;
+    white-space: pre-wrap;
+    border: 1px solid #BABDB6;
+    border-left: 1em solid #A5A5AF;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.review blockquote.empty {
+    color: #888;
+}
+
+
+/* Instruction steps */
+/* ==================================================================== */
+
+.step {
+    background-color: #EEEEEC;
+    border: 1px solid #aaa;
+    padding: 1em;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Super fancy expandy headers that no longer need to die */
+/* ==================================================================== */
+
+.expandy_header {
+    cursor: pointer;
+    padding-left: 0.5em;
+    margin-bottom: 0;
+    margin-top: 10px;
+    clear: both;
+}
+
+.expandy_header:before {
+    content: "";
+    display: block;
+    float: left;
+    border-color: transparent;
+    border-left-color: #0489B7;
+    border-style: solid;
+    border-width: .4em;
+    margin-top: .4em;
+    width: 0;
+
+    transition: transform 0.4s ease-in-out;
+    transform-origin: 25% 50%;
+}
+
+.expandy_header.expanded:before {
+    transform: rotate(90deg);
+}
+Žôç|i…      Xí-Xí-=£ŠXîUH   D    :https://extensions.gnome.org/static/css/sweettooth.24ba54ff916a.css strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAX4MIIF9DCCBNygAwIBAgIRAI7bzLG/JscxCXWcmjfzd5wwDQYJKoZIhvcNAQELBQAwXzELMAkGA1UEBhMCRlIxDjAMBgNVBAgTBVBhcmlzMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UEChMFR2FuZGkxIDAeBgNVBAMTF0dhbmRpIFN0YW5kYXJkIFNTTCBDQSAyMB4XDTE2MTEwOTAwMDAwMFoXDTE3MTEwOTIzNTk1OVowXzEhMB8GA1UECxMYRG9tYWluIENvbnRyb2wgVmFsaWRhdGVkMSQwIgYDVQQLExtHYW5kaSBTdGFuZGFyZCBXaWxkY2FyZCBTU0wxFDASBgNVBAMMCyouZ25vbWUub3JnMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEArS3oMv3ehUxHGzHiWNRmlbndhSLooN56ubFB3LZYXHMwUD/WgfjGtuUq5GjLV4wZVG+gTkofzSghdsM8M59pN47coI8mJHiSD8evKu3/u0Ez+Bd4HHiHd6dmVj63fKq/sGxPnJhWpNy7UxlIqIMSrYBtHDUtwkVuyw8GkF/SHQu/qCloTCumoOBVZVtAuIddC5o7fofMkn4WZxvEK4uUCgYbjAbWwpfwljpFzfL0kMKXWQLIhQvT1XHLIxe3S6UtfRTcCIZi4I3yde9U5HSmJBsFJNlJIgPiM/xuMZ7+k6E9XvWGH4kXG6+KkrU+b8pWzgMr4RS9eeCCSRtS57+0gQhk7VLMlreOtEsiYWjQBb9rDjOeBSeVnozCOEu7fUPlh33/KZHO6j040R4bveF/UAGdlaR0Bq/2NX/L/kXbMJWb1rRuZ76gnrhDjsW/yRJpaAV2wl1M4NmALf5jJWWDOG16GuJDuRKyHn9kk0eBeTuUV3pe6wqrh34+1PF8IjgIFsxpmznbRjk1vh4l9DHlcE/OxYjUzrSXNWR21iKsp+L53ytriJREdA3NE75L4YJ+CTXSXT7al/26tvkKjAjQUchz6lWGiSyA8iJJPFKgaH0xBy+eoompZ6kfLuThKpFQWhw+xdDznwFxD1Ft8CH9CbWbDxknUBG3ApQLkTRdwHUCAwEAAaOCAakwggGlMB8GA1UdIwQYMBaAFLOQp9jJr07NYTyffK1df0H9aTDqMB0GA1UdDgQWBBQEZWcnZfrK2D9GvhmH+kJId4uGvjAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSwYDVR0gBEQwQjA2BgsrBgEEAbIxAQICGjAnMCUGCCsGAQUFBwIBFhlodHRwczovL2Nwcy51c2VydHJ1c3QuY29tMAgGBmeBDAECATBBBgNVHR8EOjA4MDagNKAyhjBodHRwOi8vY3JsLnVzZXJ0cnVzdC5jb20vR2FuZGlTdGFuZGFyZFNTTENBMi5jcmwwcwYIKwYBBQUHAQEEZzBlMDwGCCsGAQUFBzAChjBodHRwOi8vY3J0LnVzZXJ0cnVzdC5jb20vR2FuZGlTdGFuZGFyZFNTTENBMi5jcnQwJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLnVzZXJ0cnVzdC5jb20wIQYDVR0RBBowGIILKi5nbm9tZS5vcmeCCWdub21lLm9yZzANBgkqhkiG9w0BAQsFAAOCAQEAfJ3NID5wLoLSeEfKoh2eJ+rJ6ZscGg5y7zNHFnekUs18ccI1XhAHDPVkV206j/DNLtrGJWlLTq8LD10yk2zSRMXlaUyrZ2kZ2IDb5AEnPX8cnOY75POkcS1OB91z1WYnWnqJifezWnW1DNTw6UaJf+iBf00HnrjnddgbDu+3SIr6M5oWPQMdGd12ZCb9tSt4HCK6dFlJaH3c1F1utfErYkjDBiuDQ8SIZZR90e+f8SNhM1KI6QnLX+S8tHw5IUMpGz5pTzzaV/Z992L51tnmvhZEmOH0L9lzFs6B7AhO9VCozBJIBpX+CQnlu4G3e418qPsNdO0Di9wow3QzKOFUasAwAQMAAAAAAQEAAAAA request-method GET response-head HTTP/1.1 200 OK
+Last-Modified: Sun, 09 Apr 2017 19:30:23 GMT
+Etag: "3cc1-54cc0e3d213a2"
+Accept-Ranges: bytes
+Content-Length: 15553
+Content-Type: text/css
+Date: Tue, 11 Apr 2017 16:26:49 GMT
+Expires: Wed, 12 Apr 2017 16:26:49 GMT
+Server: Apache/2.4.6 (Red Hat Enterprise Linux)
+Cache-Control: public
+ original-response-headers Date: Tue, 11 Apr 2017 16:11:05 GMT
+Server: Apache/2.4.6 (Red Hat Enterprise Linux)
+Last-Modified: Sun, 09 Apr 2017 19:30:23 GMT
+Etag: "3cc1-54cc0e3d213a2"
+Accept-Ranges: bytes
+Content-Length: 15553
+Cache-Control: public
+Expires: Wed, 12 Apr 2017 16:11:05 GMT
+Content-Type: text/css
+Connection: close
+ uncompressed-len 0 net-response-time-onstart 838 net-response-time-onstop 838 necko:classified 1   <Á

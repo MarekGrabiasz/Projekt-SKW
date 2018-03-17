@@ -1,0 +1,34 @@
+
+[Data Source]
+DisplayName=Birthdays & Anniversaries
+DisplayName[as]=জন্মদিন আৰু বাৰ্ষিকীসমূহ
+DisplayName[be]=Дні нараджэнняў і гадавіны
+DisplayName[bg]=Рождени дни и годишнини
+DisplayName[ca@valencia]=Aniversaris i commemoracions
+DisplayName[el]=Γενέθλια και επέτειοι
+DisplayName[eu]=Jaioteguna eta urteurrena
+DisplayName[fi]=Syntymä- ja juhlapäivät
+DisplayName[gu]=જન્મદિવસ અને સાલગીરી યાદ અપાવનાર
+DisplayName[hi]=जन्मदिन & वर्षगाँठ
+DisplayName[ja]=誕生日や記念日
+DisplayName[kn]=ಹುಟ್ಟುಹಬ್ಬಗಳು ಹಾಗು ವಾರ್ಷಿಕೋತ್ಸವಗಳು
+DisplayName[nb]=Fødselsdager og jubileer
+DisplayName[nl]=Verjaardagen en gedenkdagen
+DisplayName[pl]=Urodziny i rocznice
+DisplayName[sk]=Narodeniny a výročia
+DisplayName[sr]=Рођендани и годишњице
+DisplayName[sv]=Födelsedagar & Jubileum
+DisplayName[ug]=تۇغۇلغان كۈن ۋە خاتىرە كۈنلەر
+DisplayName[zh_TW]=生日及週年紀念日
+Enabled=true
+Parent=contacts-stub
+
+[Calendar]
+BackendName=contacts
+Color=#fed4d3
+Enabled=true
+Writable=false
+Selected=true
+
+[Offline]
+StaySynchronized=true

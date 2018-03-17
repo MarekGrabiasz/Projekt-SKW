@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+		<meta name="theme-color" content="#294172">
+																		
+		<title>How to install a GNOME Shell extension - Fedora Magazine</title>
+		<link rel="shortcut icon" href="https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/favicon.ico" />	
+				 
+		<!-- Jetpack Site Verification Tags -->
+<meta name="google-site-verification" content="0VLV2JI6fXqQIJHGXnxgPbK_yrF3xxuzQI0-cpSdxoA" />
+
+<!-- This site is optimized with the Yoast SEO plugin v4.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://fedoramagazine.org/install-gnome-shell-extension/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to install a GNOME Shell extension - Fedora Magazine" />
+<meta property="og:description" content="What is a GNOME Shell extension? GNOME Shell extensions are add-ons that extend GNOME Shell. These extensions modify GNOME Shell either by adding functionality (i.e. Caffeine or TwitchLive_Panel), or modifying core functionality (e.g. CoverFlow). These extensions are typically provided and maintained by... Continue Reading &rarr;" />
+<meta property="og:url" content="https://fedoramagazine.org/install-gnome-shell-extension/" />
+<meta property="og:site_name" content="Fedora Magazine" />
+<meta property="article:publisher" content="https://www.facebook.com/TheFedoraProject" />
+<meta property="article:tag" content="extensions" />
+<meta property="article:tag" content="GNOME" />
+<meta property="article:tag" content="shell" />
+<meta property="article:section" content="Using Software" />
+<meta property="article:published_time" content="2016-08-11T16:00:58+00:00" />
+<meta property="article:modified_time" content="2016-08-12T15:40:09+00:00" />
+<meta property="og:updated_time" content="2016-08-12T15:40:09+00:00" />
+<meta property="og:image" content="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/install-gs-extension.jpg" />
+<meta property="og:image:width" content="1890" />
+<meta property="og:image:height" content="800" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="What is a GNOME Shell extension? GNOME Shell extensions are add-ons that extend GNOME Shell. These extensions modify GNOME Shell either by adding functionality (i.e. Caffeine or TwitchLive_Panel), or modifying core functionality (e.g. CoverFlow). These extensions are typically provided and maintained by... Continue Reading &rarr;" />
+<meta name="twitter:title" content="How to install a GNOME Shell extension - Fedora Magazine" />
+<meta name="twitter:site" content="@fedora" />
+<meta name="twitter:image" content="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/install-gs-extension.jpg" />
+<meta name="twitter:creator" content="@martinoj2009" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fedoramagazine.org' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Fedora Magazine &raquo; Feed" href="https://fedoramagazine.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Fedora Magazine &raquo; Comments Feed" href="https://fedoramagazine.org/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Fedora Magazine &raquo; How to install a GNOME Shell extension Comments Feed" href="https://fedoramagazine.org/install-gnome-shell-extension/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/fedoramagazine.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='yarppWidgetCss-css'  href='https://fedoramagazine.org/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=4.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='openid-css'  href='https://fedoramagazine.org/wp-content/plugins/openid/f/openid.css?ver=519' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://fedoramagazine.org/wp-content/plugins/jetpack/css/jetpack.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='baskerville_googleFonts-css'  href='//fonts.googleapis.com/css?family=Roboto+Slab%3A400%2C700%7CRoboto%3A400%2C400italic%2C700%2C700italic%2C300%7CPacifico%3A400&#038;ver=4.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='baskerville_style-css'  href='https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/style.css?ver=4.7.3' type='text/css' media='all' />
+<script type='text/javascript' src='https://fedoramagazine.org/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://fedoramagazine.org/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fedoramagazine.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://fedoramagazine.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.3" />
+<link rel='shortlink' href='https://wp.me/p3XX0v-3zo' />
+<link rel="alternate" type="application/json+oembed" href="https://fedoramagazine.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffedoramagazine.org%2Finstall-gnome-shell-extension%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://fedoramagazine.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffedoramagazine.org%2Finstall-gnome-shell-extension%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//widgets.wp.com'>
+<link rel='dns-prefetch' href='//s0.wp.com'>
+<link rel='dns-prefetch' href='//0.gravatar.com'>
+<link rel='dns-prefetch' href='//1.gravatar.com'>
+<link rel='dns-prefetch' href='//2.gravatar.com'>
+	
+	</head>
+	
+	<body class="post-template-default single single-post postid-13726 single-format-standard has-featured-image">
+		<div class="header-overlay section-inner">
+			<a href="/"><div class="header-overlay-inner">
+				
+			</div></a>	
+		</div>
+		<div class="header section small-padding bg-dark bg-image">
+			<div class="cover"></div>
+			
+			<div class="header-search-block bg-graphite hidden">
+			
+				<form method="get" class="searchform" action="https://fedoramagazine.org/">
+	<input type="search" value="" placeholder="Search form" name="s" class="s" /> 
+	<input type="submit" class="searchsubmit" value="Search">
+</form>			
+			</div> <!-- /header-search-block -->
+					
+			<div class="header-inner section-inner">
+				<div class="socialbuttons rss">
+					<a href="feed/">
+					<div class="socialbuttons-button">
+					 	<div class="greyscale"></div>
+						<div class="color"></div>
+					</div></a>
+				</div>
+				<div class="socialbuttons google">
+					<a href="https://plus.google.com/+fedora/">
+					<div class="socialbuttons-button">
+					 	<div class="greyscale"></div>
+						<div class="color"></div>
+					</div></a>
+				</div>
+				<div class="socialbuttons twitter">
+					<a href="https://twitter.com/fedora">
+					<div class="socialbuttons-button">
+					 	<div class="greyscale"></div>
+						<div class="color"></div>
+					</div></a>
+				</div>
+				<div class="socialbuttons facebook">
+					<a href="https://www.facebook.com/TheFedoraProject"><div class="socialbuttons-button">
+					 	<div class="greyscale"></div>
+						<div class="color"></div>
+					</div></a>
+				</div>
+			
+				<!--								
+						<h1 class="blog-title">
+							<a href="https://fedoramagazine.org" title="Fedora Magazine &mdash; The Fedora Magazine delivers guides, information, and news about the Fedora operating system and Fedora Project community." rel="home">Fedora Magazine</a>
+						</h1>
+						
+												
+							<h3 class="blog-description">The Fedora Magazine delivers guides, information, and news about the Fedora operating system and Fedora Project community.</h3>
+							
+																
+				 -->
+							
+			</div> <!-- /header-inner -->
+						
+		</div> <!-- /header -->
+		
+		<!--<div class="navigation section no-padding">
+		
+			<div class="navigation-inner section-inner">
+			
+				<div class="nav-toggle fleft hidden">
+					
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					
+					<div class="clear"></div>
+					
+				</div>
+						
+				<ul class="main-menu">
+				
+					<li class="page_item page-item-380"><a href="https://fedoramagazine.org/contact-us/">Contact Us</a></li>
+<li class="page_item page-item-11467"><a href="https://fedoramagazine.org/creating-a-featured-image-for-a-fedora-magazine-article/">Creating a featured image for a Fedora Magazine article</a></li>
+<li class="page_item page-item-13947"><a href="https://fedoramagazine.org/how-to-structure-your-article/">How to structure your article</a></li>
+<li class="page_item page-item-2078"><a href="https://fedoramagazine.org/logging-into-fedora-magazine-with-fas/">Logging into Fedora Magazine with FAS</a></li>
+<li class="page_item page-item-8667"><a href="https://fedoramagazine.org/publishing-workflow/">Publishing Workflow</a></li>
+<li class="page_item page-item-2215"><a href="https://fedoramagazine.org/submit-an-idea-or-tip/">Submit an idea or tip</a></li>
+<li class="page_item page-item-1296"><a href="https://fedoramagazine.org/terms-and-conditions/">Terms and Conditions</a></li>
+<li class="page_item page-item-10966"><a href="https://fedoramagazine.org/writing-a-new-pitch/">Writing a new pitch</a></li>
+<li class="page_item page-item-9211"><a href="https://fedoramagazine.org/writing-an-article-for-the-fedora-magazine/">Writing an article for the Fedora Magazine</a></li>
+											
+				 </ul> <!-- /main-menu -->
+				 
+				 <!--<a class="search-toggle fright" href="#"></a>-->
+				 
+				 <!--<div class="clear"></div>-->
+				 
+			<!-- </div> /navigation-inner -->
+			
+		<!-- </div>  /navigation -->
+		
+		<div class="mobile-navigation section bg-graphite no-padding hidden">
+					
+			<ul class="mobile-menu">
+			
+				<li class="page_item page-item-380"><a href="https://fedoramagazine.org/contact-us/">Contact Us</a></li>
+<li class="page_item page-item-11467"><a href="https://fedoramagazine.org/creating-a-featured-image-for-a-fedora-magazine-article/">Creating a featured image for a Fedora Magazine article</a></li>
+<li class="page_item page-item-13947"><a href="https://fedoramagazine.org/how-to-structure-your-article/">How to structure your article</a></li>
+<li class="page_item page-item-2078"><a href="https://fedoramagazine.org/logging-into-fedora-magazine-with-fas/">Logging into Fedora Magazine with FAS</a></li>
+<li class="page_item page-item-8667"><a href="https://fedoramagazine.org/publishing-workflow/">Publishing Workflow</a></li>
+<li class="page_item page-item-2215"><a href="https://fedoramagazine.org/submit-an-idea-or-tip/">Submit an idea or tip</a></li>
+<li class="page_item page-item-1296"><a href="https://fedoramagazine.org/terms-and-conditions/">Terms and Conditions</a></li>
+<li class="page_item page-item-10966"><a href="https://fedoramagazine.org/writing-a-new-pitch/">Writing a new pitch</a></li>
+<li class="page_item page-item-9211"><a href="https://fedoramagazine.org/writing-an-article-for-the-fedora-magazine/">Writing an article for the Fedora Magazine</a></li>
+										
+			 </ul> <!-- /main-menu -->
+		
+		</div> <!-- /mobile-navigation -->
+<div class="wrapper section medium-padding">
+
+	<div class="section-inner">
+
+		<div class="content fleft">
+
+			
+				<div id="post-13726" class="post-13726 post type-post status-publish format-standard has-post-thumbnail hentry category-software tag-extensions tag-gnome tag-shell">
+
+					
+					<div class="post-header">
+
+					    <h2 class="post-title"><a href="https://fedoramagazine.org/install-gnome-shell-extension/" rel="bookmark" title="How to install a GNOME Shell extension">How to install a GNOME Shell extension</a></h2>
+
+							<h3 class="post-byline">By Martino Jones
+					</div> <!-- /post-header -->
+
+					
+						<div class="featured-media">
+
+							<img width="945" height="400" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/install-gs-extension-945x400.jpg" class="attachment-post-image size-post-image wp-post-image" alt="" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/install-gs-extension-945x400.jpg 945w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/install-gs-extension-300x127.jpg 300w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/install-gs-extension-768x325.jpg 768w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/install-gs-extension-1024x433.jpg 1024w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/install-gs-extension-600x254.jpg 600w" sizes="(max-width: 945px) 100vw, 945px" />
+							
+						</div> <!-- /featured-media -->
+
+					
+					<div class="post-content">
+
+						<h2><b>What is a GNOME Shell extension?</b></h2>
+<p><span style="font-weight: 400;">GNOME Shell extensions are add-ons that extend GNOME Shell. These extensions modify GNOME Shell either by adding functionality (i.e. Caffeine or TwitchLive_Panel), or modifying core functionality (e.g. CoverFlow). These extensions are typically provided and maintained by third-party developers. However, they sometimes find their way to GNOME.</span></p>
+<h2><b>Where to find extensions</b></h2>
+<p><span style="font-weight: 400;">There are two ways you can get a GNOME Shell extension. The first way is via their website: </span><a href="https://extensions.gnome.org"><span style="font-weight: 400;">https://extensions.gnome.org</span></a><span style="font-weight: 400;">. Because the Extensions website uses special plugin functionality, you must</span><span style="font-weight: 400;"> access it using the Mozilla Firefox web browser. Once you access the site you&#8217;ll see a prompt to allow the GNOME Shell Integration. Once allowed, you are prompted to either <em>Allow Now</em> or <em>Allow and Remember</em> your decision.</span></p>
+<p><span style="font-weight: 400;">The second option for getting a GNOME Shell extension is with DNF. You can search for extensions by opening the terminal and running the following command</span></p>
+<pre><span style="font-weight: 400;">dnf search gnome-shell-extension</span></pre>
+<p><span style="font-weight: 400;">The list of GNOME Shell extensions you can choose from will be smaller compared to the GNOME Extensions website. You can get a few more by using this command, since not all of the packages are named with “gnome-shell-extension&#8221;:</span></p>
+<pre>dnf search gnome | grep extension</pre>
+<p>To install via the command line, run this command:</p>
+<pre>dnf install &lt;package-name&gt;</pre>
+<h2><b>How to install extensions</b></h2>
+<p><span style="font-weight: 400;">Now let’s get some GNOME Shell extensions installed via the GNOME website. In this example, we&#8217;ll install the Applications Menu and Dash to Dock extensions. </span><span style="font-weight: 400;">Once I access the website I will be prompted by Firefox to allow the <strong>GNOME Shell Integration</strong> mentioned earlier. I’m going to allow this.</span></p>
+<p><a href="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt.png"><img class="aligncenter size-large wp-image-13984" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt-1024x217.png" alt="GNOMEEXT_FirefoxPrompt" width="676" height="143" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt-1024x217.png 1024w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt-300x64.png 300w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt-768x163.png 768w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt-945x201.png 945w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt-600x127.png 600w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt.png 1150w" sizes="(max-width: 676px) 100vw, 676px" /></a></p>
+<p>I will then be prompted to <em>Allow Now</em> or <em>Allow and Remember</em>. You may choose either, although <em>Always</em> is more convenient since you won&#8217;t be prompted every time you visit the site.</p>
+<p><a href="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt2.png"><img class="aligncenter size-full wp-image-13985" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt2.png" alt="GNOMEEXT_FirefoxPrompt2" width="463" height="236" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt2.png 463w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt2-300x153.png 300w" sizes="(max-width: 463px) 100vw, 463px" /></a></p>
+<p><span style="font-weight: 400;">Luckily the first extension is on the front page. Select the <em>Applications Menu</em> extension.</span></p>
+<p><a href="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxFrontPage.png"><img class="aligncenter size-full wp-image-13982" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxFrontPage.png" alt="GNOMEEXT_FirefoxFrontPage" width="1014" height="677" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxFrontPage.png 1014w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxFrontPage-300x200.png 300w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxFrontPage-768x513.png 768w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxFrontPage-945x631.png 945w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxFrontPage-600x401.png 600w" sizes="(max-width: 1014px) 100vw, 1014px" /></a></p>
+<p><span style="font-weight: 400;">On the details page of the extension, you can see the description, comments and the ability to install the extension. </span><span style="font-weight: 400;">You can toggle the <em>On/Off</em> switch by clicking it, to install (<em>On</em>) or disable (<em>Off</em>) the extension. </span></p>
+<p><a href="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxInstallSwitch.png"><img class="aligncenter size-large wp-image-13983" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxInstallSwitch-1024x403.png" alt="GNOMEEXT_FirefoxInstallSwitch" width="676" height="266" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxInstallSwitch-1024x403.png 1024w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxInstallSwitch-300x118.png 300w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxInstallSwitch-768x302.png 768w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxInstallSwitch-945x372.png 945w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxInstallSwitch-600x236.png 600w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxInstallSwitch.png 1090w" sizes="(max-width: 676px) 100vw, 676px" /></a></p>
+<p>Now go back to the front page. This time, search for <strong>Dash to Dock</strong>.</p>
+<p><a href="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxSearch.png"><img class="aligncenter size-full wp-image-13987" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxSearch.png" alt="GNOMEEXT_FirefoxSearch" width="1000" height="666" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxSearch.png 1000w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxSearch-300x200.png 300w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxSearch-768x511.png 768w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxSearch-945x629.png 945w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxSearch-600x400.png 600w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+<p><span style="font-weight: 400;">Select the Dash to Dock extension. </span><span style="font-weight: 400;">Once on the Dash to Dock page, toggle the <em>On</em> switch to install the extension. When you toggle the switch you are prompted with an install message. This is because the extension isn’t already on your machine. The previous extension is already included with your Fedora Workstation installation (as of Fedora 24). At this point, you can just click <em>Install</em>.</span></p>
+<p><a href="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPromptInstall.png"><img class="aligncenter size-large wp-image-13986" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPromptInstall-1024x655.png" alt="GNOMEEXT_FirefoxPromptInstall" width="676" height="432" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPromptInstall-1024x655.png 1024w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPromptInstall-300x192.png 300w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPromptInstall-768x492.png 768w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPromptInstall-945x605.png 945w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPromptInstall-600x384.png 600w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPromptInstall.png 1075w" sizes="(max-width: 676px) 100vw, 676px" /></a></p>
+<h2><b>How do I configure a GNOME Shell extension?</b></h2>
+<p><span style="font-weight: 400;">Now that there are some extensions installed, let’s configure an extension. You need the <em>GNOME Tweak Tool</em> utility for this. You can get GNOME Tweak Tool by entering the following command into the terminal:</span></p>
+<pre>sudo dnf install gnome-tweak-tool</pre>
+<p><span style="font-weight: 400;">Or you can install it via the Software Center. When you open the Software Center you can search for <em>tweak</em>. GNOME Tweak Tool should be the first search result. Click the <em>Install</em> button to install the package.</span></p>
+<p><a href="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/SoftwareStoreInstall.png"><img class="aligncenter size-large wp-image-13988" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/SoftwareStoreInstall-1024x674.png" alt="SoftwareStoreInstall" width="676" height="445" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/SoftwareStoreInstall-1024x674.png 1024w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/SoftwareStoreInstall-300x197.png 300w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/SoftwareStoreInstall-768x506.png 768w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/SoftwareStoreInstall-945x622.png 945w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/SoftwareStoreInstall-600x395.png 600w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/SoftwareStoreInstall.png 1033w" sizes="(max-width: 676px) 100vw, 676px" /></a></p>
+<p><span style="font-weight: 400;">Once it’s installed, open it and click on the <em>Extensions</em> section on the left side of the window. The website allows you to turn on, install and disable extensions. This is also where you can remove extensions by clicking the <em>Remove</em> button for that extension. </span></p>
+<p><a href="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensions.png"><img class="aligncenter size-full wp-image-13989" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensions.png" alt="TweakToolExtensions" width="901" height="651" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensions.png 901w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensions-300x217.png 300w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensions-768x555.png 768w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensions-600x434.png 600w" sizes="(max-width: 901px) 100vw, 901px" /></a></p>
+<p><span style="font-weight: 400;">You can also configure an extension by clicking on its gear button. For instance, click on the gear for <em>Dash to Dock</em> and notice you can adjust whether it autohides, extend the panel, or adjust the icon size.</span></p>
+<p><a href="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensionsConfig.png"><img class="aligncenter size-full wp-image-13990" src="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensionsConfig.png" alt="TweakToolExtensionsConfig" width="905" height="733" srcset="https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensionsConfig.png 905w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensionsConfig-300x243.png 300w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensionsConfig-768x622.png 768w, https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensionsConfig-600x486.png 600w" sizes="(max-width: 905px) 100vw, 905px" /></a></p>
+<p>Now you can enjoy the benefits of the extensible GNOME Shell, with a variety of add-ons of your choice.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share:</h3><div class="sd-content"><ul><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-13726" class="share-facebook sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-13726" class="share-google-plus-1 sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-13726" class="share-twitter sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-telegram"><a rel="nofollow" data-shared="" class="share-telegram sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=telegram" target="_blank" title="Click to share on Telegram"><span>Telegram</span></a></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-13726" class="share-pinterest sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class="share-end"></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-13726" class="share-linkedin sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-jetpack-whatsapp"><a rel="nofollow" data-shared="" class="share-jetpack-whatsapp sd-button share-icon" href="whatsapp://send?text=How%20to%20install%20a%20GNOME%20Shell%20extension https%3A%2F%2Ffedoramagazine.org%2Finstall-gnome-shell-extension%2F" target="_blank" title="Click to share on WhatsApp"><span>WhatsApp</span></a></li><li class="share-end"></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=pocket" target="_blank" title="Click to share on Pocket"><span>Pocket</span></a></li><li class="share-skype"><a rel="nofollow" data-shared="sharing-skype-13726" class="share-skype sd-button share-icon" href="https://fedoramagazine.org/install-gnome-shell-extension/?share=skype" target="_blank" title="Share on Skype"><span>Skype</span></a></li><li class="share-end"></li><li class="share-end"></li></ul></div></div></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-58617187-13726-58ed0310a4068' data-src='//widgets.wp.com/likes/#blog_id=58617187&amp;post_id=13726&amp;origin=fedoramagazine.org&amp;obj_id=58617187-13726-58ed0310a4068' data-name='like-post-frame-58617187-13726-58ed0310a4068'><h3 class="sd-title">Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+						
+						<div class="clear"></div>
+
+					</div> <!-- /post-content -->
+
+					<div class="post-meta-container">
+
+						<div class="post-author">
+
+							<div class="post-author-content">
+
+								<h4>Martino Jones</h4>
+
+								<p></p>
+
+								
+								<div class="author-links">
+
+									<a class="author-link-posts" title="Author archive" href="https://fedoramagazine.org/author/martinojones/">Author archive</a>
+
+									
+										<a class="author-link-website" title="Author website" href="http://martinojones.id.fedoraproject.org/">Author website</a>
+
+									
+										<a class="author-link-twitter" title="@martinoj2009 on Twitter" href="http://www.twitter.com/martinoj2009">@martinoj2009 on Twitter</a>
+
+									
+								</div> <!-- /author-links -->
+
+							</div> <!-- /post-author-content -->
+
+						</div> <!-- /post-author -->
+
+						<div class="post-meta">
+
+							<p class="post-date">August 11, 2016</p>
+
+							
+							<p class="post-categories"><a href="https://fedoramagazine.org/category/software/" rel="category tag">Using Software</a></p>
+
+							
+								<p class="post-tags"><a href="https://fedoramagazine.org/tag/extensions/" rel="tag">extensions</a>, <a href="https://fedoramagazine.org/tag/gnome/" rel="tag">GNOME</a>, <a href="https://fedoramagazine.org/tag/shell/" rel="tag">shell</a></p>
+
+							
+							<div class="clear"></div>
+
+							<div class="post-nav">
+
+								
+									<a class="post-nav-prev" title="Previous post: Siddharth Sharma: How do you Fedora?" href="https://fedoramagazine.org/siddarth-sharma-how-do-you-fedora/">Previous post</a>
+
+								
+								
+									<a class="post-nav-next" title="Next post: Performance profiling with perf" href="https://fedoramagazine.org/performance-profiling-perf/">Next post</a>
+
+								
+								
+								<div class="clear"></div>
+
+							</div>
+
+						</div> <!-- /post-meta -->
+
+						<div class="clear"></div>
+
+					</div> <!-- /post-meta-container -->
+
+					
+		
+		<div class="comments">
+		
+			<a name="comments"></a>
+			
+			<div class="comments-title-container">
+				
+				<h2 class="comments-title fleft">
+				
+					16 Comments					
+				</h2>
+				
+								
+				<div class="clear"></div>
+			
+			</div> <!-- /comments-title-container -->
+	
+			<ol class="commentlist">
+			    	<li class="comment even thread-even depth-1" id="li-comment-469719">
+	
+		<div id="comment-469719" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/577235d0039521c6b41437127d81a14b?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/577235d0039521c6b41437127d81a14b?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Richard</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469719">August 12, 2016 at 04:32</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>Very well illustrative for those newbies into the gnome world but I honestly think that this extensions should be something to be included in every linux distribution that ships gnome, managing them is a hassle, I heard gnome software will handle them so I hope we don&#8217;t need to go back to that old website which hasn&#8217;t change its beta status in years&#8230;</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	<ul class="children">
+	<li class="comment odd alt depth-2" id="li-comment-469722">
+	
+		<div id="comment-469722" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/64360c1451d8f7a175d640dd60082aed?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/64360c1451d8f7a175d640dd60082aed?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Bob</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469722">August 12, 2016 at 07:45</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>Quite agree with Richard. And by the way, is there anyone on earth using gnome-shell without the tweak tool? Shouldn&#8217;t this be part of gnome instead of having to install it as any other program?</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	<ul class="children">
+	<li class="comment even depth-3" id="li-comment-469726">
+	
+		<div id="comment-469726" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/4cd500b2cc4eb5999ef90e8306e1eb46?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4cd500b2cc4eb5999ef90e8306e1eb46?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Juergen</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469726">August 12, 2016 at 17:11</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>Well, I couldn&#8217;t survive Gnome without the tweak tool, some extensions and gsettings or it&#8217;s graphical frontend dconf. It&#8217;s nice to keep things simple, but if you oversimplify, things get a bit too complicated to adapt to your needs.</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt depth-3" id="li-comment-469755">
+	
+		<div id="comment-469755" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/dd9b23345933c8b9a7f4a5a8869feb87?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/dd9b23345933c8b9a7f4a5a8869feb87?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn"><a href='http://schemefusion.com' rel='external nofollow' class='url'>Onyeibo Oku</a></cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469755">August 16, 2016 at 03:28</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>Yeah, there is.  I&#8217;m one of them.  I think one grows out of these extensions with time, especially if you know how to run gsettings and tweak css yourself.  &#8230; But frankly, after sometime (without the extensions) one begins to wonder why we need them in the first place.  The bare basics are actually sufficient for most work environments and extensions have the habit of messing with the DE with certain updates.</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even depth-2" id="li-comment-469725">
+	
+		<div id="comment-469725" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/16bb260cd0cf09b45e806c893b8b5c11?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/16bb260cd0cf09b45e806c893b8b5c11?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Norbert</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469725">August 12, 2016 at 16:22</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>gnome upgrades are horrible, and most of the extensions you can not arrange in the settings &#8230;</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	<ul class="children">
+	<li class="comment odd alt depth-3" id="li-comment-469730">
+	
+		<div id="comment-469730" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/4cd500b2cc4eb5999ef90e8306e1eb46?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4cd500b2cc4eb5999ef90e8306e1eb46?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Juergen</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469730">August 12, 2016 at 19:47</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>@Norbert: What do you mean? Upgrades/Updates via Gnome Software or Upgrades of the gnome shell?</p>
+<p>But back to the topic of the (well written) article: I&#8217;m really thankful for the possibilities which Gnome extensions offer.</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-469739">
+	
+		<div id="comment-469739" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/79a1294f38cdc39d4e116fa3eaee40d6?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/79a1294f38cdc39d4e116fa3eaee40d6?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Pierre Timmermans</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469739">August 13, 2016 at 07:23</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>Very good article. It is indeed difficult to understand why the dash-to-dock is not part of Gnome, and also the tweak tool. Something else annoying is that some extensions stopped working after upgrading to fedora 24 because they are not compatible with this version of gnome (open-weather for ex.)</p>
+<p>I think Gnome has a potential but the first user experience is awful, that kind of article is absolutely needed.</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-469743">
+	
+		<div id="comment-469743" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/788def1484e62941d45004963411c3e1?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/788def1484e62941d45004963411c3e1?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Leslie Satenstein</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469743">August 13, 2016 at 14:23</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>The gnome extensions page is essential for configuring Gnome into something personnaly useful.</p>
+<p>You demonstrated the installation of an extension via the website and via the command line.  Its too bad that Gnome, via their software tool, does not integrate the above mentioned two options.</p>
+<p>And by the way, the very best of the best extensions are from the website.<br />
+Here are my favourite three.</p>
+<p>1) =======<br />
+ TaskBar by zpydr</p>
+<p>TaskBar displays icons of running applications on the top panel or alternatively on a new bottom panel. Activate, minimize or close tasks with a simple click.</p>
+<p>2) =======<br />
+ Removable Drive Menu by fmuellner</p>
+<p>A status menu for accessing and unmounting removable devices.</p>
+<p>3)=======<br />
+ OpenWeather by jens</p>
+<p>Weather extension to display weather information from <a href="https://openweathermap.org/" rel="nofollow">https://openweathermap.org/</a> or <a href="https://forecast.io" rel="nofollow">https://forecast.io</a> for almost all locations in the world.</p>
+<p>The first extension is indespensible.</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-469744">
+	
+		<div id="comment-469744" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/788def1484e62941d45004963411c3e1?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/788def1484e62941d45004963411c3e1?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Leslie Satenstein</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469744">August 13, 2016 at 17:11</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>I very much prefer to see and read about the extensions via the extensions webpages.<br />
+For one, it is more personal.</p>
+<p>We see the author name, the feedback from other users, and a good idea about the usefulness of said extension.</p>
+<p>As some extensions are occasionally updated, one can&#8217;t know which of the 20 webpage extensions/listings had recent updates.</p>
+<p>One new feature request for the extension website would be a request for a listing of extensions in date (most recent first) listing.</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-469746">
+	
+		<div id="comment-469746" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/c245bdb8a3d225d9b55ce76ce8267733?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/c245bdb8a3d225d9b55ce76ce8267733?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Ray</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469746">August 14, 2016 at 02:35</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>I would just like to add that you can access the extension preferences by running &#8216;gnome-shell-extension-prefs&#8217; from the terminal or the run dialog (Alt+F2)</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-469747">
+	
+		<div id="comment-469747" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/418841f7c871248531e9616ebf9c2d73?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/418841f7c871248531e9616ebf9c2d73?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Raul</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469747">August 14, 2016 at 12:40</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>Great article for newbies.<br />
+I am using it a long long time and always asking me why GNOME cannot integrate the tweak-tool and a few basic extensions the hole distro would benefit from in their default GNOME installation, such as Dash-to-Dock, Openweather and Sound Input &amp; Output Device Chooser. There are a lot more, but at least a few extensions which enhance the gnome experiece should be integrated by default (since years).</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-469751">
+	
+		<div id="comment-469751" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/788def1484e62941d45004963411c3e1?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/788def1484e62941d45004963411c3e1?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Leslie Satenstein</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469751">August 15, 2016 at 13:15</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>With the four Fedora Remixes that I am aware of,   have included the Tweak tool in their offering.<br />
+The tweaktool is indespensible if we are a Gnome user.</p>
+<p>An extension that is indispensible is  Taskbar by Zpydr  (Its around page 20 in the list of extensions).  This one extension makes Gnome most usable for all.</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	<ul class="children">
+	<li class="comment even depth-2" id="li-comment-469768">
+	
+		<div id="comment-469768" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/420a069f0b8ae8069ead5276248def47?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/420a069f0b8ae8069ead5276248def47?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Dan</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469768">August 18, 2016 at 07:45</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>Yet here I am telling you I see no need for that extension. Different strokes, &#8230;.</p>
+<p>I&#8217;d be more interested in hearing how to change the mouse events of the shell. I want a middle click on my favourites to keep the activities view open, so I can start multiple programs without the need to press CTRL.</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-469780">
+	
+		<div id="comment-469780" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/71ae0e553025e36cb60c18af43291fa4?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/71ae0e553025e36cb60c18af43291fa4?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Joe</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469780">August 20, 2016 at 05:33</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>@Ray: I didn&#8217;t know about  gnome-shell-extension-prefs. Wonderful, once again a valuable resource I&#8217;m carrying around without knowing of.</p>
+<p>On my netbook Scalling Factor, found beneath Fonts on Tweak Tool is an essential adjustment.</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-469828">
+	
+		<div id="comment-469828" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/d626acf8bf13ae8e7025a53caca24d2b?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/d626acf8bf13ae8e7025a53caca24d2b?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn">Little ponyx</cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469828">August 24, 2016 at 02:07</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>Gnome extension website should be improved to help user easily find good extension and to respect extension developers. Adding download count, trending, top download this week etc would be great</p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-469837">
+	
+		<div id="comment-469837" class="comment">
+		
+			<img alt='' src='https://secure.gravatar.com/avatar/7b8ccf2a9adadce2a81df1949c38a2b6?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/7b8ccf2a9adadce2a81df1949c38a2b6?s=160&amp;d=retro&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />		
+			<div class="comment-inner">
+
+				<div class="comment-header">
+											
+					<cite class="fn"><a href='https://copr.fedorainfracloud.org/coprs/jmliger/' rel='external nofollow' class='url'>Jean-Marc</a></cite>					
+					<p><a href="https://fedoramagazine.org/install-gnome-shell-extension/#comment-469837">August 24, 2016 at 13:33</a></p>
+					
+					<div class="comment-actions">
+					
+												
+												
+						<div class="clear"></div>
+					
+					</div> <!-- /comment-actions -->
+					
+				</div> <!-- /comment-header -->
+
+				<div class="comment-content">
+				
+									
+					<p>You can also browse  some COPR repositories, like mine for gnome-shell-extension-dash-to-dock :<br />
+<a href="https://copr.fedorainfracloud.org/coprs/jmliger/gnome-extensions/" rel="nofollow">https://copr.fedorainfracloud.org/coprs/jmliger/gnome-extensions/</a></p>
+					
+				</div><!-- /comment-content -->
+				
+				<div class="comment-actions-below hidden">
+					
+										
+										
+					<div class="clear"></div>
+				
+				</div> <!-- /comment-actions -->
+				
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+	</li><!-- #comment-## -->
+			</ol>
+			
+							
+						
+		</div><!-- /comments -->
+		
+		
+		
+		<p class="nocomments">Comments are closed.</p>
+		
+		
+	
+			   	
+			</div> <!-- /post -->
+
+		</div> <!-- /content -->
+
+		
+	<div class="sidebar fright" role="complementary">
+	
+		<div class="widget widget_magazine_recent_widget"><div class="widget-content">			<h3 class="widget-title">Recent Posts</h3>
+			<a href="https://fedoramagazine.org/try-tilix-new-terminal-emulator-fedora/"><div>
+							<div class="related-thumb" style="background-image: url(https://cdn.fedoramagazine.org/wp-content/uploads/2017/04/tilix-1.png)">
+							</div><div class="related-title">Try Tilix &mdash; a new terminal emulator in Fedora</div></div></a><a href="https://fedoramagazine.org/radka-janekova-fedora/"><div>
+							<div class="related-thumb" style="background-image: url(https://cdn.fedoramagazine.org/wp-content/uploads/2017/04/FedoraMagazine-945x400.jpg)">
+							</div><div class="related-title">Radka Janekova: How do you Fedora?</div></div></a><a href="https://fedoramagazine.org/read-mri-aeskulap/"><div>
+							<div class="related-thumb" style="background-image: url(https://cdn.fedoramagazine.org/wp-content/uploads/2017/03/aeskulap.jpg)">
+							</div><div class="related-title">Read your MRI using aeskulap in Fedora</div></div></a>	</div><div class="clear"></div></div><div class="widget widget_yarpp_widget"><div class="widget-content"><div class='yarpp-related-widget'>
+<h3 class="widget-title">Related Posts</h3>
+		<ol>
+					<a href="https://fedoramagazine.org/weather-updates-openweather-gnome-shell-extension/" rel="bookmark"><div>
+			<div class="related-thumb" style="background-image: url('https://cdn.fedoramagazine.org/wp-content/uploads/2016/12/openweather.jpg')">
+			</div>
+			<div class="related-title">
+				Weather updates with OpenWeather GNOME Shell extension			</div>
+		</div></a>
+					<a href="https://fedoramagazine.org/move-status-icons-to-your-gnome-top-bar/" rel="bookmark"><div>
+			<div class="related-thumb" style="background-image: url('https://cdn.fedoramagazine.org/wp-content/uploads/2016/11/gse-topicons.jpg')">
+			</div>
+			<div class="related-title">
+				Move status icons to your GNOME top bar			</div>
+		</div></a>
+					<a href="https://fedoramagazine.org/install-atom-fedora/" rel="bookmark"><div>
+			<div class="related-thumb" style="background-image: url('https://cdn.fedoramagazine.org/wp-content/uploads/2016/10/install-atom.jpg')">
+			</div>
+			<div class="related-title">
+				How to Install Atom in Fedora			</div>
+		</div></a>
+			</ol>
+</div>
+</div><div class="clear"></div></div><div class="widget widget_text"><div class="widget-content">			<div class="textwidget">Read about how you can <a href="http://fedoramagazine.org/submit-an-idea-or-tip">submit an idea</a> or even <a href="http://fedoramagazine.org/writing-an-article-for-the-fedora-magazine/">write an article</a> for Fedora Magazine.</div>
+		</div><div class="clear"></div></div>		
+	</div><!-- /sidebar -->
+
+
+		<div class="clear"></div>
+
+	</div> <!-- /section-inner -->
+
+</div> <!-- /wrapper -->
+
+<div class="footer section medium-padding bg-graphite">
+	
+	<div class="section-inner row">
+	
+				
+			<div class="column column-1 one-third">
+			
+				<div class="widgets">
+		
+					<div class="widget jetpack_subscription_widget"><div class="widget-content"><h3 class="widget-title">Subscribe to Fedora Magazine via Email</h3>
+			<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-4">
+				<div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+</div><p>Join 2,824 other subscribers</p>
+					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-4">
+							Email Address						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-4" placeholder="Email Address" />
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe" />
+						<input type="hidden" name="source" value="https://fedoramagazine.org/install-gnome-shell-extension/" />
+						<input type="hidden" name="sub-type" value="widget" />
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-4" />
+												<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget" />
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// In case the placeholder functionality is available we remove labels
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-4]' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-4'),
+					input = d.getElementById('subscribe-field-blog_subscription-4'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</div><div class="clear"></div></div>										
+				</div>
+				
+			</div>
+			
+		 <!-- /footer-a -->
+			
+				
+			<div class="column column-2 one-third">
+			
+				<div class="widgets">
+		
+					<div class="widget widget_text"><div class="widget-content">			<div class="textwidget">Read about how you can <a href="http://fedoramagazine.org/submit-an-idea-or-tip">submit an idea</a> or even <a href="http://fedoramagazine.org/writing-an-article-for-the-fedora-magazine/">write an article</a> for Fedora Magazine.</div>
+		</div><div class="clear"></div></div>										
+				</div> <!-- /widgets -->
+				
+			</div>
+			
+		 <!-- /footer-b -->
+							
+				
+			<div class="column column-3 one-third">
+		
+				<div class="widgets">
+		
+					<div class="widget widget_search"><div class="widget-content"><form method="get" class="searchform" action="https://fedoramagazine.org/">
+	<input type="search" value="" placeholder="Search form" name="s" class="s" /> 
+	<input type="submit" class="searchsubmit" value="Search">
+</form></div><div class="clear"></div></div>										
+				</div> <!-- /widgets -->
+				
+			</div>
+			
+		 <!-- /footer-c -->
+		
+		<div class="clear"></div>
+	
+	</div> <!-- /footer-inner -->
+
+</div> <!-- /footer -->
+
+<div class="credits section bg-dark small-padding">
+
+	<div class="credits-inner section-inner">
+
+		<p class="credits-left">
+		
+			The opinions expressed on this website are those of each author, not of the author's employer or of Red Hat. Fedora Magazine aspires to publish all content under a Creative Commons license but may not be able to do so in all cases. You are responsible for ensuring that you have the necessary permission to reuse any work on this site. The Fedora logo is a trademark of Red Hat, Inc. <a href="/terms-and-conditions">Terms and Conditions</a>
+		
+		</p>
+		<div class="clear"></div>
+	
+	</div> <!-- /credits-inner -->
+	
+</div> <!-- /credits -->
+
+n/a
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/fedoramagazine.org\/install-gnome-shell-extension\/":13726};
+	</script>
+	<div id="sharing_email" style="display: none;">
+		<form action="/install-gnome-shell-extension/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" title="This field is for validation and should not be changed" />
+			<script>jQuery( document ).ready( function(){ document.getElementById('jetpack-source_f_name').value = '' });</script>
+			
+			<img style="float: right; display: none" class="loading" src="https://fedoramagazine.org/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+		<link rel='stylesheet' id='yarppRelatedCss-css'  href='https://fedoramagazine.org/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=4.7.3' type='text/css' media='all' />
+<script type='text/javascript' src='https://fedoramagazine.org/wp-includes/js/comment-reply.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201715'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/js/imagesloaded.pkgd.js?ver=4.7.3'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/js/mediaelement-and-player.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/js/flexslider.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/js/global.js?ver=4.7.3'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-includes/js/wp-embed.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/postmessage.js?ver=4.8.2'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/jquery.jetpack-resize.js?ver=4.8.2'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/jquery.inview.js?ver=4.8.2'></script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-content/plugins/jetpack/modules/likes/queuehandler.js?ver=4.8.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://fedoramagazine.org/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=4.8.2'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-google-plus-1', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-telegram', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtelegram', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-tumblr', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-linkedin', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-pocket', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcompocket', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-skype', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomskype', 'menubar=1,resizable=1,width=305,height=665' );
+				return false;
+			});
+</script>
+		<iframe src='https://widgets.wp.com/likes/master.html?ver=20160429#ver=20160429' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type='text/javascript' src='https://stats.wp.com/e-201715.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.8.2',blog:'58617187',post:'13726',tz:'0',srv:'fedoramagazine.org'} ]);
+	_stq.push([ 'clickTrackerInit', '58617187', '13726' ]);
+</script>
+
+</body>
+</html>
+O���+      X�X�=���       :    :https://fedoramagazine.org/install-gnome-shell-extension/ necko:classified 1 strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAZvMIIGazCCBVOgAwIBAgIQBp63ai2SoXmV1Tbt+nl7EzANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMS8wLQYDVQQDEyZEaWdpQ2VydCBTSEEyIEhpZ2ggQXNzdXJhbmNlIFNlcnZlciBDQTAeFw0xNzAyMDEwMDAwMDBaFw0yMDA1MDExMjAwMDBaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEQMA4GA1UEBxMHUmFsZWlnaDEVMBMGA1UEChMMUmVkIEhhdCBJbmMuMRswGQYDVQQDExJmZWRvcmFtYWdhemluZS5vcmcwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCrWO4Oh1U2v4wlo8W2Y16qaMWJj0vJ7QGSTY5W1kv+5njoWDH7uUG/hkgpG1g89ydT12BNxjPECOJrsyEuzbRiIAhho55wYo7bnJd0+K1OhFqGINIM6FS0J2kcdITieBWOwuNkhvIkHkR8Dz3kvh6Z4B3eKUEKUnmj77HGf4ovnhs/eMWnua+JPtMZtOL1mgu2jl48fkX9XtaT+6feIctPY2Tprb0b6BFWm5lkthIGcvwjLdJR2YNioEX/oKpm1LEBo48wHd3OqYg5I8C5h5BLAMuoAMGlu0N/t2uQSkRXXdMyFjFUPrCQS20fWPtg0l2BhJfS5BeCN5DTMtD9KJ9yskpqyUd/0EeDvboj+gv9G+QYjKZlTY45b5sH5OHMPGbK3K958t2KhyrAHtjqE1G9Da9oav1/NkLstfRiDd2vtUYGnyVoS00l/BGeoZz5/wFQWoxZv2aOtE6JifkhHq76SEO3Fer3JdAwKJmM0BcHqXhrb+WUEcaLFOE2uo3MhRx3OWwFAESCWNfzW9rmm88GsSYUb30UWFy/1dZTL3wMJlF6/Enfi0SnmMt+CIQTMY5W++GGG+3oOcBILHT2I3XBpbe7rSqhW2d2Pw2gkQ62x1BBNjvAdLanku5ZEs/bIV5oCCettkQJS91ODWU5sq3ummOPLFOm2bkYUlMXkFuwwwIDAQABo4ICAzCCAf8wHwYDVR0jBBgwFoAUUWj/kK8CB3U8zNllZGKiErhZcjswHQYDVR0OBBYEFAQ3TrvymfrZ6Kpy15JX7MTE32S4MDUGA1UdEQQuMCyCEmZlZG9yYW1hZ2F6aW5lLm9yZ4IWd3d3LmZlZG9yYW1hZ2F6aW5lLm9yZzAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHUGA1UdHwRuMGwwNKAyoDCGLmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZlci1nNS5jcmwwNKAyoDCGLmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZlci1nNS5jcmwwTAYDVR0gBEUwQzA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzAIBgZngQwBAgIwgYMGCCsGAQUFBwEBBHcwdTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tME0GCCsGAQUFBzAChkFodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRTSEEySGlnaEFzc3VyYW5jZVNlcnZlckNBLmNydDAMBgNVHRMBAf8EAjAAMA0GCSqGSIb3DQEBCwUAA4IBAQBz64DG/7ulPPBmblz6dO2Uvkjvu4b9GQ9wF/Fe3nLMkxPxTpIsH8UbJ4exbf4zc6K2VQKV9pf8Bq4FIAKom9te3hQiHFL0QC1lh7IRzJXWRJwZnCeI+oo4XOJrzPwoU88PX071r10pNYNdAUMflReC5ReXr+Is1XmYhXOfyp7raIRB91nBfcfvGzaHte9wTMyNP5NgXdCen/u8Vij1oZbXl/zLrKmZnxcidbvc9AdeOnFjmmkBFhOeOtPbbYS5o52S8TgQ3dqMDEayWOgRjp/gUciyHXU4eTrXfR7h7fK+aQtAOS63w1tpA/aomgTmu5M5IhHpwxOjX0eXW1npu4qHwC8BAwAAAAABAQAAAQA= request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 11 Apr 2017 16:23:44 GMT
+Server: Apache/2.4.6 (Red Hat Enterprise Linux) OpenSSL/1.0.1e-fips PHP/5.4.16
+Strict-Transport-Security: max-age=15768000; includeSubDomains; preload
+X-Powered-By: PHP/5.4.16
+Link: <https://fedoramagazine.org/wp-json/>; rel="https://api.w.org/", <https://wp.me/p3XX0v-3zo>; rel=shortlink
+Content-Type: text/html; charset=UTF-8
+x-varnish: 2812360
+Age: 0
+Via: 1.1 varnish-v4
+Accept-Ranges: bytes
+AppTime: D=442987
+AppServer: proxy10.phx2.fedoraproject.org
+ original-response-headers Date: Tue, 11 Apr 2017 16:23:44 GMT
+Server: Apache/2.4.6 (Red Hat Enterprise Linux) OpenSSL/1.0.1e-fips PHP/5.4.16
+Strict-Transport-Security: max-age=15768000; includeSubDomains; preload
+X-Powered-By: PHP/5.4.16
+Link: <https://fedoramagazine.org/wp-json/>; rel="https://api.w.org/"
+Link: <https://wp.me/p3XX0v-3zo>; rel=shortlink
+Content-Type: text/html; charset=UTF-8
+x-varnish: 2812360
+Age: 0
+Via: 1.1 varnish-v4
+Accept-Ranges: bytes
+AppTime: D=442987
+AppServer: proxy10.phx2.fedoraproject.org
+Keep-Alive: timeout=15, max=500
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+ uncompressed-len 0 predictor::resource-count 86 predictor::https://fedoramagazine.org/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=4.7.3 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/openid/f/openid.css?ver=519 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/jetpack/css/jetpack.css?ver=4.8.2 1,1,1491927823,4097 predictor::https://fonts.googleapis.com/css?family=Roboto+Slab%3A400%2C700%7CRoboto%3A400%2C400italic%2C700%2C700italic%2C300%7CPacifico%3A400&ver=4.7.3 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/style.css?ver=4.7.3 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-includes/js/jquery/jquery.js?ver=1.12.4 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-includes/js/wp-emoji-release.min.js?ver=4.7.3 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/install-gs-extension-945x400.jpg 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt-768x163.png 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPrompt2.png 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxFrontPage.png 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxInstallSwitch-768x302.png 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxSearch.png 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/GNOMEEXT_FirefoxPromptInstall-768x492.png 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/SoftwareStoreInstall-768x506.png 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensions.png 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/07/TweakToolExtensionsConfig.png 1,1,1491927823,4097 net-response-time-onstart 1304 net-response-time-onstop 1700 predictor::https://secure.gravatar.com/avatar/577235d0039521c6b41437127d81a14b?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/64360c1451d8f7a175d640dd60082aed?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/4cd500b2cc4eb5999ef90e8306e1eb46?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/dd9b23345933c8b9a7f4a5a8869feb87?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/16bb260cd0cf09b45e806c893b8b5c11?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/79a1294f38cdc39d4e116fa3eaee40d6?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/788def1484e62941d45004963411c3e1?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/c245bdb8a3d225d9b55ce76ce8267733?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/418841f7c871248531e9616ebf9c2d73?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/420a069f0b8ae8069ead5276248def47?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/71ae0e553025e36cb60c18af43291fa4?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/d626acf8bf13ae8e7025a53caca24d2b?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://secure.gravatar.com/avatar/7b8ccf2a9adadce2a81df1949c38a2b6?s=80&d=retro&r=g 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=4.7.3 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-includes/js/comment-reply.min.js?ver=4.7.3 1,1,1491927823,4097 predictor::https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201715 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-includes/js/imagesloaded.min.js?ver=3.2.0 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-includes/js/masonry.min.js?ver=3.3.2 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/js/imagesloaded.pkgd.js?ver=4.7.3 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/js/mediaelement-and-player.min.js?ver=4.7.3 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/js/flexslider.min.js?ver=4.7.3 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/js/global.js?ver=4.7.3 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-includes/js/wp-embed.min.js?ver=4.7.3 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/postmessage.js?ver=4.8.2 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/jquery.jetpack-resize.js?ver=4.8.2 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/jquery.inview.js?ver=4.8.2 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/jetpack/modules/likes/queuehandler.js?ver=4.8.2 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=4.8.2 1,1,1491927823,4097 predictor::https://stats.wp.com/e-201715.js 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/fmag-ribbon.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/fedoramagazinetext.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/rss-grey.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/rss-color.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/google+-grey.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/google+-color.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/twitter-grey.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/twitter-color.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/facebook-grey.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/facebook-color.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/1x/author-w.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/1x/archive-w.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/1x/home-w.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/1x/social/twitter-w.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/1x/folder-g.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/1x/tag-g.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/1x/prev-g.png 1,1,1491927823,4096 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/1x/next-g.png 1,1,1491927823,4096 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2017/04/tilix-1.png 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2017/04/FedoraMagazine-945x400.jpg 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2017/03/aeskulap.jpg 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/12/openweather.jpg 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/11/gse-topicons.jpg 1,1,1491927823,4097 predictor::https://cdn.fedoramagazine.org/wp-content/uploads/2016/10/install-atom.jpg 1,1,1491927823,4097 predictor::https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.05/images/icons/1x/spyglass-g.png 1,1,1491927823,4096 predictor::https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2 1,1,1491927823,4096 predictor::https://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJYlIZu-HDpmDIZMigmsroc4.woff2 1,1,1491927823,4096 predictor::https://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zo4P5ICox8Kq3LLUNMylGO4.woff2 1,1,1491927823,4096 predictor::https://fonts.gstatic.com/s/roboto/v15/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2 1,1,1491927823,4096 predictor::https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2 1,1,1491927823,4096 predictor::https://pixel.wp.com/g.gif?v=ext&j=1%3A4.8.2&blog=58617187&post=13726&tz=0&srv=fedoramagazine.org&host=fedoramagazine.org&ref=https%3A%2F%2Fwww.google.pl%2F&rand=0.4940321732654195 1,1,1491927823,4097 predictor::https://www.linkedin.com/countserv/count/share?format=jsonp&callback=updateLinkedInCount&url=https%3A%2F%2Ffedoramagazine.org%2Finstall-gnome-shell-extension%2F&_=1491927826122 1,1,1491927823,4097 predictor::https://pixel.wp.com/g.gif?v=wpcom-no-pv&x_sharing-count-request=linkedin&r=0.6109988997890465 1,1,1491927823,4097 predictor::https://api.pinterest.com/v1/urls/count.json?callback=WPCOMSharing.update_pinterest_count&url=https%3A%2F%2Ffedoramagazine.org%2Finstall-gnome-shell-extension%2F&_=1491927826123 1,1,1491927823,4097 predictor::https://pixel.wp.com/g.gif?v=wpcom-no-pv&x_sharing-count-request=pinterest&r=0.8550160567477408 1,1,1491927823,4097 predictor::https://graph.facebook.com/?callback=WPCOMSharing.update_facebook_count&ids=https%3A%2F%2Ffedoramagazine.org%2Finstall-gnome-shell-extension%2F&_=1491927826124 1,1,1491927823,4097 predictor::https://pixel.wp.com/g.gif?v=wpcom-no-pv&x_sharing-count-request=facebook&r=0.48868843894998293 1,1,1491927823,4097  %�

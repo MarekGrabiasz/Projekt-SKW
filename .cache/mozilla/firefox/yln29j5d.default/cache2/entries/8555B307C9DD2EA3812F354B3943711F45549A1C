@@ -1,0 +1,259 @@
+// -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
+
+define(['jquery', 'messages', 'modal', 'hashParamUtils',
+        'templates', 'staticfiles', 'extensions', 'uploader', 'fsui',
+        'jquery.cookie', 'jquery.jeditable',
+        'jquery.timeago', 'jquery.raty', 'jquery.colorbox'],
+function($, messages, modal, hashParamUtils, templates, staticfiles) {
+    "use strict";
+
+    if (!$.ajaxSettings.headers)
+        $.ajaxSettings.headers = {};
+
+    $.ajaxSettings.headers['X-CSRFToken'] = $.cookie('csrftoken');
+
+    $.fn.csrfEditable = function(url, options) {
+        return $(this).each(function() {
+            var $elem = $(this);
+
+            function error(xhr, status, error) {
+                if (status == 403) {
+                    $elem.css("background-color", "#fcc");
+                }
+            }
+
+            $elem.editable(url, $.extend(options || {},
+                                { onblur: 'submit',
+                                  ajaxoptions: { error: error, dataType: 'json' },
+                                  callback: function(result, settings) {
+                                      $elem.text(result);
+                                  },
+                                  data: function(string, settings) {
+                                      return $.trim(string);
+                                  }}));
+            $elem.addClass("editable");
+        });
+    };
+
+    $(document).ready(function() {
+        // Make the login link activatable.
+        $("#login_link").click(function(event) {
+            $(this).toggleClass('selected');
+            $("#login_popup_form").slideToggle();
+            return false;
+        });
+
+        // Add lightbox for screenshots
+        $('div.extension-details').on('click', 'div.screenshot > a', function(event) {
+            event.preventDefault();
+
+            $.colorbox({
+                href: $(this).prop('href'),
+                maxWidth: '80%',
+                maxHeight: '80%'
+            });
+        });
+
+        $("time").timeago();
+
+        $("#new_display_name").each(function() {
+            var pk = $(this).data('pk');
+            $(this).csrfEditable('/accounts/change_display_name/' + pk);
+        });
+
+        $('#local_extensions').addLocalExtensions();
+        $('.extension.single-page').addExtensionSwitch();
+
+        $.extend($.fn.raty.defaults, {
+            path: '/static/images/',
+            starOff: 'star-empty.png',
+            starOn: 'star-full.png',
+            size: 25
+        });
+
+        if (staticfiles.getImage('images/star-empty.png'))
+        {
+            $.fn.raty.defaults.starOff = staticfiles.getImageFile('images/star-empty.png');
+        }
+
+        if (staticfiles.getImage('images/star-full.png'))
+        {
+            $.fn.raty.defaults.starOn = staticfiles.getImageFile('images/star-full.png');
+        }
+
+        $.fn.ratify = function() {
+            return this.each(function() {
+                $(this).raty({
+                    score: $(this).data('rating-value'),
+                    readOnly: true
+                });
+            });
+        };
+
+        let rating_initial = $('#rating_form').find('input[name="rating_initial"]');
+
+        $('.comment .rating').ratify();
+        $('#rating_form:not(.preview)').hide();
+        $('#rating_form .rating').raty({
+            scoreName: 'rating',
+            score: rating_initial.length > 0 ? rating_initial.val() : undefined
+        });
+
+        if($('#rating_form input[name="show_rating"]').val() == '1')
+        {
+            $('#rating_form').find('.rating').show();
+        }
+        else
+        {
+            $('#rating_form').find('.rating').hide();
+        }
+
+        function makeShowForm(isRating) {
+            return function() {
+                $('#leave_comment, #leave_rating').removeClass('active');
+                $(this).addClass('active');
+                var $rating = $('#rating_form').slideDown().find('.rating');
+                if (isRating)
+				{
+					$rating.show();
+					$('#rating_form input[name="show_rating"]').val('1');
+				}
+                else
+				{
+					$rating.hide();
+					$('#rating_form input[name="show_rating"]').val('0');
+				}
+            };
+        }
+
+        $('#leave_comment').click(makeShowForm(false));
+        $('#leave_rating').click(makeShowForm(true));
+
+        $('.expandy_header').click(function() {
+            $(this).toggleClass('expanded').next().slideToggle();
+        }).not('.expanded').next().hide();
+
+        $('#extension_shell_versions_info').buildShellVersionsInfo();
+
+        var $extensionsList = $('#extensions-list').
+            paginatorify().
+            on('page-loaded', function() {
+                $('li.extension').grayOutIfOutOfDate();
+
+                // If we're searching, don't add FSUI for now.
+                if (!$('search_input').val())
+                    $('#extensions-list .before-paginator').fsUIify();
+
+                // Scroll the page back up to the top.
+                document.documentElement.scrollTop = 0; // Firefox
+                document.body.scrollTop = 0; // WebKit
+            }).trigger('load-page');
+
+        var term = "";
+        $('#search_input').on('input', function() {
+            var newTerm = $.trim($(this).val());
+
+            if (newTerm != term) {
+                term = newTerm;
+                // On a new search parameter, reset page to 0.
+                hashParamUtils.setHashParam('page', undefined);
+                $extensionsList.trigger('load-page');
+            }
+        });
+
+        $('#error_report').fillInErrors();
+
+        $('.extension_status_toggle a').click(function() {
+            var $link = $(this);
+            var $tr = $link.parents('tr');
+            var href = $link.attr('href');
+            var pk = $tr.data('pk');
+            var $ext = $link.parents('.extension');
+
+            var req = $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                data: { pk: pk },
+                url: href
+            });
+
+            req.done(function(data) {
+                $ext.data('svm', data.svm);
+                $('#extension_shell_versions_info').buildShellVersionsInfo();
+                $tr.find('.mvs').html(data.mvs);
+                $tr.find('.extension_status_toggle').toggleClass('visible');
+            });
+
+            return false;
+        });
+
+        $('.extension.single-page').each(function() {
+            var pk = $(this).data('epk');
+            if ($(this).hasClass('can-edit')) {
+                var inlineEditURL = '/ajax/edit/' + pk;
+                $('#extension_name, #extension_url').csrfEditable(inlineEditURL);
+                $('#extension_description').csrfEditable(inlineEditURL, {type: 'textarea'});
+
+                $('.screenshot .upload').parent().uploadify('/ajax/upload/screenshot/'+pk);
+                $('.icon.upload').uploadify('/ajax/upload/icon/'+pk);
+            }
+
+            function fetchComments(base, showAll) {
+                var $loading = base.find('.loading');
+                $loading.show();
+
+                $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    data: { pk: pk, all: showAll },
+                    url: '/comments/all/',
+                }).done(function(comments) {
+                    var $commentsHolder = base.find('.comments-holder');
+
+                    $loading.hide();
+
+                    if (comments.length < 5)
+                        showAll = false;
+
+                    var data = { comments: comments, show_all: showAll };
+                    var $newContent = $('<div>').append(templates.get('extensions/comments_list')(data));
+                    $newContent.addClass('comments-holder');
+
+                    $newContent.find('time').timeago();
+                    $newContent.find('.rating').ratify();
+                    $newContent.find('.show-all').on('click', function() {
+                        $(this).hide();
+                        fetchComments(base, true);
+                    });
+
+                    $commentsHolder.replaceWith($newContent);
+                });
+            }
+
+            $(this).find('#comments').each(function() {
+                fetchComments($(this), false);
+            });
+        });
+    });
+});
+>æÉCÂ~      Xí-Xí-=£ŠXö>J   <    :https://extensions.gnome.org/static/js/main.1fc84711cd48.js necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Last-Modified: Sat, 25 Mar 2017 21:19:50 GMT
+Etag: "2043-54b94aba19ac3"
+Accept-Ranges: bytes
+Content-Length: 8259
+Content-Type: application/javascript
+Date: Tue, 11 Apr 2017 16:26:51 GMT
+Expires: Tue, 18 Apr 2017 16:26:51 GMT
+Server: Apache/2.4.6 (Red Hat Enterprise Linux)
+Cache-Control: public
+ original-response-headers Date: Thu, 06 Apr 2017 08:50:03 GMT
+Server: Apache/2.4.6 (Red Hat Enterprise Linux)
+Last-Modified: Sat, 25 Mar 2017 21:19:50 GMT
+Etag: "2043-54b94aba19ac3"
+Accept-Ranges: bytes
+Content-Length: 8259
+Cache-Control: public
+Expires: Thu, 13 Apr 2017 08:50:03 GMT
+Content-Type: application/javascript
+Connection: close
+ uncompressed-len 0 net-response-time-onstart 824 net-response-time-onstop 824    C
