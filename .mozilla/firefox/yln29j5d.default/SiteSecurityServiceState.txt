@@ -9,7 +9,7 @@ incoming.telemetry.mozilla.org:HSTS	0	17607	1537042049268,1,0
 stats.g.doubleclick.net:HSTS	0	17267	1502814795560,1,1
 versioncheck-bg.addons.mozilla.org:HSTS	2	17607	1521274681724,1,0
 piwik.fedorainfracloud.org:HSTS	1	17267	1507695534738,1,1
-shavar.services.mozilla.com:HSTS	2	17607	1552809998594,1,1
+shavar.services.mozilla.com:HSTS	2	17607	1552813599778,1,1
 extensions.gnome.org:HSTS	0	17267	1491942512712,1,1
 git-scm.com:HSTS	0	17607	1552810101214,1,0
 self-repair.mozilla.org:HSTS	2	17607	1552809997242,1,1

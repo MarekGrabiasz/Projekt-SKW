@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <application-state>
   <context id="">
-    <application id="org.gnome.Nautilus.desktop" open-window-count="1" score="8" last-seen="1521276550"/>
+    <application id="org.gnome.Nautilus.desktop" open-window-count="1" score="9" last-seen="1521277161"/>
     <application id="yelp.desktop" open-window-count="0" score="10" last-seen="1521275645"/>
-    <application id="org.gnome.Terminal.desktop" open-window-count="1" score="228" last-seen="1521276836"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="1" score="310" last-seen="1521277851"/>
     <application id="meld.desktop" open-window-count="0" score="0" last-seen="1521275230"/>
-    <application id="org.gnome.gedit.desktop" open-window-count="1" score="11" last-seen="1521276569"/>
-    <application id="firefox.desktop" open-window-count="1" score="93" last-seen="1521276846"/>
-    <application id="gitg.desktop" open-window-count="0" score="4" last-seen="1521276731"/>
+    <application id="org.gnome.gedit.desktop" open-window-count="1" score="17" last-seen="1521277726"/>
+    <application id="firefox.desktop" open-window-count="1" score="122" last-seen="1521277843"/>
+    <application id="gitg.desktop" open-window-count="0" score="17" last-seen="1521277721"/>
   </context>
 </application-state>
