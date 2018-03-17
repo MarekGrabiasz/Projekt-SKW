@@ -3,7 +3,7 @@ Pierwsza wersja pliku do repozytorium github
 oto zmiany po pierwszej wersji, niezatwierdzone???? a może
 
 
-i kojlejna wersja kodu
+i kolejna wersja kodu
 
-dodatek nowego elelmentu
-oraz zmiana fragemntu 
+dodatek nowego elementu
+oraz zmiana fragmentu 
